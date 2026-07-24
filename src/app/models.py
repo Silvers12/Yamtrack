@@ -9,6 +9,7 @@ from django.core.validators import (
     MinValueValidator,
 )
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 from django.db.models import (
     CheckConstraint,
     Count,
@@ -46,22 +47,22 @@ class Sources(models.TextChoices):
     HARDCOVER = "hardcover", "Hardcover"
     COMICVINE = "comicvine", "Comic Vine"
     BGG = "bgg", "BoardGameGeek"
-    MANUAL = "manual", "Manual"
+    MANUAL = "manual", _("Manual")
 
 
 class MediaTypes(models.TextChoices):
     """Choices for the media type of the item."""
 
-    TV = "tv", "TV Show"
-    SEASON = "season", "TV Season"
-    EPISODE = "episode", "Episode"
-    MOVIE = "movie", "Movie"
-    ANIME = "anime", "Anime"
-    MANGA = "manga", "Manga"
-    GAME = "game", "Game"
-    BOOK = "book", "Book"
-    COMIC = "comic", "Comic"
-    BOARDGAME = "boardgame", "Boardgame"
+    TV = "tv", _("TV Show")
+    SEASON = "season", _("TV Season")
+    EPISODE = "episode", _("Episode")
+    MOVIE = "movie", _("Movie")
+    ANIME = "anime", _("Anime")
+    MANGA = "manga", _("Manga")
+    GAME = "game", _("Game")
+    BOOK = "book", _("Book")
+    COMIC = "comic", _("Comic")
+    BOARDGAME = "boardgame", _("Boardgame")
 
 
 class Item(CalendarTriggerMixin, models.Model):
@@ -765,20 +766,20 @@ class MediaManager(models.Manager):
 class Status(models.TextChoices):
     """Choices for item status."""
 
-    COMPLETED = "Completed", "Completed"
-    IN_PROGRESS = "In progress", "In Progress"
-    PLANNING = "Planning", "Planning"
-    PAUSED = "Paused", "Paused"
-    DROPPED = "Dropped", "Dropped"
+    COMPLETED = "Completed", _("Completed")
+    IN_PROGRESS = "In progress", _("In Progress")
+    PLANNING = "Planning", _("Planning")
+    PAUSED = "Paused", _("Paused")
+    DROPPED = "Dropped", _("Dropped")
 
 
 class UserMessageLevel(models.TextChoices):
     """Choices for persistent user messages."""
 
-    SUCCESS = "success", "Success"
-    WARNING = "warning", "Warning"
-    ERROR = "error", "Error"
-    INFO = "info", "Info"
+    SUCCESS = "success", _("Success")
+    WARNING = "warning", _("Warning")
+    ERROR = "error", _("Error")
+    INFO = "info", _("Info")
 
 
 class UserMessage(models.Model):

@@ -2,6 +2,7 @@ import math
 
 from django import forms
 from django.conf import settings
+from django.utils.translation import gettext_lazy as _
 
 from app import config
 from app.models import (
@@ -97,15 +98,15 @@ class ManualItemForm(forms.ModelForm):
     parent_tv = forms.ModelChoiceField(
         required=False,
         queryset=TV.objects.none(),
-        empty_label="Select",
-        label="Parent TV Show",
+        empty_label=_("Select"),
+        label=_("Parent TV Show"),
     )
 
     parent_season = forms.ModelChoiceField(
         required=False,
         queryset=Season.objects.none(),
-        empty_label="Select",
-        label="Parent Season",
+        empty_label=_("Select"),
+        label=_("Parent Season"),
     )
 
     class Meta:
@@ -279,7 +280,7 @@ class GameForm(MediaForm):
     progress = CustomDurationField(
         required=False,
         widget=forms.TextInput(attrs={"placeholder": "hh:mm"}),
-        label="Progress (Time Played)",
+        label=_("Progress (Time Played)"),
     )
 
     class Meta(MediaForm.Meta):

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Yamtrack\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 19:06+0000\n"
+"POT-Creation-Date: 2026-07-24 19:41+0000\n"
 "PO-Revision-Date: 2026-07-24 21:00+0200\n"
 "Last-Translator: Silvers\n"
 "Language-Team: French\n"
@@ -14,6 +14,288 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: app/forms.py:101 app/forms.py:108
+msgid "Select"
+msgstr "Sélectionner"
+
+#: app/forms.py:102 templates/app/create_entry.html:137
+msgid "Parent TV Show"
+msgstr "Série parente"
+
+#: app/forms.py:109 templates/app/create_entry.html:184
+msgid "Parent Season"
+msgstr "Saison parente"
+
+#: app/forms.py:283
+msgid "Progress (Time Played)"
+msgstr "Progression (temps de jeu)"
+
+#: app/helpers.py:112 app/views.py:628
+#, python-format
+msgid "%(field)s: %(error)s"
+msgstr "%(field)s : %(error)s"
+
+#: app/models.py:50
+msgid "Manual"
+msgstr "Manuel"
+
+#: app/models.py:56
+msgid "TV Show"
+msgstr "Série TV"
+
+#: app/models.py:57
+msgid "TV Season"
+msgstr "Saison TV"
+
+#: app/models.py:58
+msgid "Episode"
+msgstr "Épisode"
+
+#: app/models.py:59
+msgid "Movie"
+msgstr "Film"
+
+#: app/models.py:60 app/templatetags/app_tags.py:160
+msgid "Anime"
+msgstr "Anime"
+
+#: app/models.py:61 app/templatetags/app_tags.py:161
+msgid "Manga"
+msgstr "Manga"
+
+#: app/models.py:62
+msgid "Game"
+msgstr "Jeu"
+
+#: app/models.py:63
+msgid "Book"
+msgstr "Livre"
+
+#: app/models.py:64
+msgid "Comic"
+msgstr "BD"
+
+#: app/models.py:65
+msgid "Boardgame"
+msgstr "Jeu de société"
+
+#: app/models.py:769
+msgid "Completed"
+msgstr "Terminé"
+
+#: app/models.py:770
+msgid "In Progress"
+msgstr "En cours"
+
+#: app/models.py:771
+msgid "Planning"
+msgstr "Prévu"
+
+#: app/models.py:772
+msgid "Paused"
+msgstr "En pause"
+
+#: app/models.py:773
+msgid "Dropped"
+msgstr "Abandonné"
+
+#: app/models.py:779 templates/users/import_data.html:461
+msgid "Success"
+msgstr "Réussi"
+
+#: app/models.py:780
+msgid "Warning"
+msgstr "Avertissement"
+
+#: app/models.py:781
+msgid "Error"
+msgstr "Erreur"
+
+#: app/models.py:782
+msgid "Info"
+msgstr "Info"
+
+#: app/templatetags/app_tags.py:156
+msgid "TV Shows"
+msgstr "Séries TV"
+
+#: app/templatetags/app_tags.py:157
+msgid "TV Seasons"
+msgstr "Saisons TV"
+
+#: app/templatetags/app_tags.py:158 templates/app/media_details.html:551
+msgid "Episodes"
+msgstr "Épisodes"
+
+#: app/templatetags/app_tags.py:159
+msgid "Movies"
+msgstr "Films"
+
+#: app/templatetags/app_tags.py:162
+msgid "Games"
+msgstr "Jeux"
+
+#: app/templatetags/app_tags.py:163
+msgid "Books"
+msgstr "Livres"
+
+#: app/templatetags/app_tags.py:164
+msgid "Comics"
+msgstr "BD"
+
+#: app/templatetags/app_tags.py:165
+msgid "Boardgames"
+msgstr "Jeux de société"
+
+#: app/views.py:410
+msgid "Manual items cannot be synced."
+msgstr "Les éléments manuels ne peuvent pas être synchronisés."
+
+#: app/views.py:426
+msgid "The data was recently synced, please wait a few seconds."
+msgstr ""
+"Les données ont été synchronisées récemment, veuillez patienter quelques "
+"secondes."
+
+#: app/views.py:502
+#, python-format
+msgid "%(title)s was synced to %(label)s successfully."
+msgstr "%(title)s a été synchronisé avec %(label)s avec succès."
+
+#: app/views.py:750
+#, python-format
+msgid "%(media_name)s already exists in the database."
+msgstr "%(media_name)s existe déjà dans la base de données."
+
+#: app/views.py:783
+#, python-format
+msgid "%(item)s added successfully."
+msgstr "%(item)s ajouté avec succès."
+
+#: events/views.py:114
+msgid "The task to refresh upcoming releases has been queued."
+msgstr ""
+"La tâche de rafraîchissement des sorties à venir a été mise en file "
+"d'attente."
+
+#: integrations/imports/helpers.py:243
+msgid "Invalid import time."
+msgstr "Heure d'import invalide."
+
+#: integrations/imports/helpers.py:250
+msgid "The same import task is already scheduled."
+msgstr "La même tâche d'import est déjà planifiée."
+
+#: integrations/imports/helpers.py:282
+#, python-format
+msgid "%(source)s import task scheduled."
+msgstr "Tâche d'import %(source)s planifiée."
+
+#: integrations/views.py:65
+msgid "Invalid or expired Trakt authorization request."
+msgstr "Requête d'autorisation Trakt invalide ou expirée."
+
+#: integrations/views.py:69
+msgid "Trakt authorization failed."
+msgstr "L'autorisation Trakt a échoué."
+
+#: integrations/views.py:91 integrations/views.py:125
+msgid "The task to import media from Trakt has been queued."
+msgstr ""
+"La tâche d'import des médias depuis Trakt a été mise en file d'attente."
+
+#: integrations/views.py:112
+msgid "Trakt username is required."
+msgstr "Le nom d'utilisateur Trakt est requis."
+
+#: integrations/views.py:182
+msgid "The task to import media from Simkl has been queued."
+msgstr ""
+"La tâche d'import des médias depuis Simkl a été mise en file d'attente."
+
+#: integrations/views.py:202
+msgid "MyAnimeList username is required."
+msgstr "Le nom d'utilisateur MyAnimeList est requis."
+
+#: integrations/views.py:212
+msgid "The task to import media from MyAnimeList has been queued."
+msgstr ""
+"La tâche d'import des médias depuis MyAnimeList a été mise en file d'attente."
+
+#: integrations/views.py:267 integrations/views.py:300
+msgid "AniList username is required."
+msgstr "Le nom d'utilisateur AniList est requis."
+
+#: integrations/views.py:281 integrations/views.py:313
+msgid "AniList import queued."
+msgstr "Import AniList mis en file d'attente."
+
+#: integrations/views.py:331
+msgid "Kitsu user ID is required."
+msgstr "L'ID utilisateur Kitsu est requis."
+
+#: integrations/views.py:339
+msgid "The task to import media from Kitsu has been queued."
+msgstr ""
+"La tâche d'import des médias depuis Kitsu a été mise en file d'attente."
+
+#: integrations/views.py:359
+msgid "Yamtrack CSV file is required."
+msgstr "Le fichier CSV Yamtrack est requis."
+
+#: integrations/views.py:370
+msgid "The task to import media from Yamtrack CSV file has been queued."
+msgstr ""
+"La tâche d'import des médias depuis le fichier CSV Yamtrack a été mise en "
+"file d'attente."
+
+#: integrations/views.py:381
+msgid "HowLongToBeat CSV file is required."
+msgstr "Le fichier CSV HowLongToBeat est requis."
+
+#: integrations/views.py:392
+msgid "The task to import media from HowLongToBeat CSV file has been queued."
+msgstr ""
+"La tâche d'import des médias depuis le fichier CSV HowLongToBeat a été mise "
+"en file d'attente."
+
+#: integrations/views.py:402
+msgid "Steam ID is required."
+msgstr "L'ID Steam est requis."
+
+#: integrations/views.py:410
+msgid "The task to import media from Steam has been queued."
+msgstr ""
+"La tâche d'import des médias depuis Steam a été mise en file d'attente."
+
+#: integrations/views.py:429
+msgid "IMDB CSV file is required."
+msgstr "Le fichier CSV IMDB est requis."
+
+#: integrations/views.py:440
+msgid "The task to import media from IMDB CSV file has been queued."
+msgstr ""
+"La tâche d'import des médias depuis le fichier CSV IMDB a été mise en file "
+"d'attente."
+
+#: integrations/views.py:451
+msgid "GoodReads CSV file is required."
+msgstr "Le fichier CSV GoodReads est requis."
+
+#: integrations/views.py:462
+msgid "The task to import media from GoodReads CSV file has been queued."
+msgstr ""
+"La tâche d'import des médias depuis le fichier CSV GoodReads a été mise en "
+"file d'attente."
+
+#: lists/views.py:231
+msgid "You do not have permission to edit this list."
+msgstr "Vous n'avez pas la permission de modifier cette liste."
+
+#: lists/views.py:245
+msgid "You do not have permission to delete this list."
+msgstr "Vous n'avez pas la permission de supprimer cette liste."
 
 #: templates/400.html:6 templates/403.html:6 templates/403_csrf.html:6
 msgid "Forbidden"
@@ -27,7 +309,9 @@ msgstr "Requête incorrecte"
 msgid ""
 "The server could not understand the request due to invalid syntax or missing "
 "parameters."
-msgstr "Le serveur n'a pas pu comprendre la requête en raison d'une syntaxe invalide ou de paramètres manquants."
+msgstr ""
+"Le serveur n'a pas pu comprendre la requête en raison d'une syntaxe invalide "
+"ou de paramètres manquants."
 
 #: templates/400.html:19 templates/403.html:20 templates/403_csrf.html:29
 #: templates/404.html:17 templates/500.html:23
@@ -53,7 +337,9 @@ msgstr "Accès interdit"
 msgid ""
 "You don't have permission to access this resource. Please log in or contact "
 "an administrator."
-msgstr "Vous n'avez pas la permission d'accéder à cette ressource. Veuillez vous connecter ou contacter un administrateur."
+msgstr ""
+"Vous n'avez pas la permission d'accéder à cette ressource. Veuillez vous "
+"connecter ou contacter un administrateur."
 
 #: templates/403.html:28 templates/403_csrf.html:37
 msgid "Log In"
@@ -98,7 +384,9 @@ msgstr "Une erreur est survenue"
 
 #: templates/500.html:19
 msgid "We're sorry, but there was an error processing your request."
-msgstr "Nous sommes désolés, mais une erreur est survenue lors du traitement de votre requête."
+msgstr ""
+"Nous sommes désolés, mais une erreur est survenue lors du traitement de "
+"votre requête."
 
 #: templates/500.html:31
 msgid "Try Again"
@@ -236,7 +524,9 @@ msgstr "Remplir avec l'heure actuelle"
 
 #: templates/app/components/fill_track_episode.html:147
 msgid "Fills in the date and time the episode will be finished if started now"
-msgstr "Remplit avec la date et l'heure auxquelles l'épisode sera terminé s'il commence maintenant"
+msgstr ""
+"Remplit avec la date et l'heure auxquelles l'épisode sera terminé s'il "
+"commence maintenant"
 
 #: templates/app/components/fill_track_episode.html:148
 msgid "Fill in end time"
@@ -283,7 +573,9 @@ msgstr "Créer une entrée personnalisée"
 msgid ""
 "Add a custom media entry to your collection if it's not available in the "
 "database."
-msgstr "Ajoutez une entrée média personnalisée à votre collection si elle n'est pas disponible dans la base de données."
+msgstr ""
+"Ajoutez une entrée média personnalisée à votre collection si elle n'est pas "
+"disponible dans la base de données."
 
 #: templates/app/create_entry.html:111
 msgid "Media Type"
@@ -297,10 +589,6 @@ msgstr "Titre"
 msgid "Enter title"
 msgstr "Saisir le titre"
 
-#: templates/app/create_entry.html:137
-msgid "Parent TV Show"
-msgstr "Série parente"
-
 #: templates/app/create_entry.html:142
 msgid "Search for a TV show..."
 msgstr "Rechercher une série..."
@@ -308,10 +596,6 @@ msgstr "Rechercher une série..."
 #: templates/app/create_entry.html:159
 msgid "Season Number"
 msgstr "Numéro de saison"
-
-#: templates/app/create_entry.html:184
-msgid "Parent Season"
-msgstr "Saison parente"
 
 #: templates/app/create_entry.html:189
 msgid "Search for a season..."
@@ -455,7 +739,9 @@ msgstr "STREAMING"
 msgid ""
 "Watch provider region is not configured. Set a region or disable this "
 "feature in the"
-msgstr "La région du fournisseur de visionnage n'est pas configurée. Définissez une région ou désactivez cette fonctionnalité dans les"
+msgstr ""
+"La région du fournisseur de visionnage n'est pas configurée. Définissez une "
+"région ou désactivez cette fonctionnalité dans les"
 
 #: templates/app/media_details.html:447
 msgid "preferences"
@@ -494,10 +780,6 @@ msgstr "%(count)s membres de la distribution"
 msgid "DLCs"
 msgstr "DLC"
 
-#: templates/app/media_details.html:551
-msgid "Episodes"
-msgstr "Épisodes"
-
 #: templates/app/media_details.html:655
 msgid "Last watched:"
 msgstr "Dernier visionnage :"
@@ -525,7 +807,9 @@ msgstr "Aucun %(media_types)s suivi pour le moment"
 msgid ""
 "Start tracking your %(media_type_plural)s to keep a record of what you've "
 "%(verb)s."
-msgstr "Commencez à suivre vos %(media_type_plural)s pour garder une trace de ce que vous avez %(verb)s."
+msgstr ""
+"Commencez à suivre vos %(media_type_plural)s pour garder une trace de ce que "
+"vous avez %(verb)s."
 
 #: templates/app/media_list.html:155
 #, python-format
@@ -571,7 +855,9 @@ msgstr "Aucun résultat trouvé"
 msgid ""
 "We couldn't find any matches for \"%(query)s\". Try checking your spelling "
 "or using different keywords."
-msgstr "Nous n'avons trouvé aucun résultat pour « %(query)s ». Essayez de vérifier l'orthographe ou d'utiliser des mots-clés différents."
+msgstr ""
+"Nous n'avons trouvé aucun résultat pour « %(query)s ». Essayez de vérifier "
+"l'orthographe ou d'utiliser des mots-clés différents."
 
 #: templates/app/statistics.html:7 templates/app/statistics.html:12
 #: templates/base.html:145
@@ -683,7 +969,9 @@ msgstr "Aucune donnée disponible"
 #: templates/app/statistics.html:272
 msgid ""
 "Add media items with different statuses to see their distribution by type."
-msgstr "Ajoutez des médias avec différents statuts pour voir leur répartition par type."
+msgstr ""
+"Ajoutez des médias avec différents statuts pour voir leur répartition par "
+"type."
 
 #: templates/app/statistics.html:280
 msgid "Score Distribution by Media Type"
@@ -756,7 +1044,9 @@ msgstr "Lien d'exportation"
 msgid ""
 "This link can be used to integrate your calendar into any of your calendar "
 "applications."
-msgstr "Ce lien peut être utilisé pour intégrer votre calendrier dans n'importe laquelle de vos applications de calendrier."
+msgstr ""
+"Ce lien peut être utilisé pour intégrer votre calendrier dans n'importe "
+"laquelle de vos applications de calendrier."
 
 #: templates/events/components/calendar_list.html:27
 #, python-format
@@ -815,7 +1105,9 @@ msgstr "Aucune liste créée pour le moment"
 #: templates/lists/custom_lists.html:100
 msgid ""
 "Create custom lists to organize your media collection and share with friends."
-msgstr "Créez des listes personnalisées pour organiser votre collection de médias et la partager avec vos amis."
+msgstr ""
+"Créez des listes personnalisées pour organiser votre collection de médias et "
+"la partager avec vos amis."
 
 #: templates/lists/custom_lists.html:103
 msgid "Create Your First List"
@@ -842,7 +1134,8 @@ msgstr "Aucun élément dans cette liste pour le moment"
 
 #: templates/lists/list_detail.html:225
 msgid "Start adding your favorite media to build your collection"
-msgstr "Commencez à ajouter vos médias favoris pour constituer votre collection"
+msgstr ""
+"Commencez à ajouter vos médias favoris pour constituer votre collection"
 
 #: templates/lists/list_detail.html:228
 msgid "Browse Media"
@@ -857,7 +1150,9 @@ msgstr "Connexions de compte"
 msgid ""
 "You can sign in to your account using any of the following third-party "
 "accounts:"
-msgstr "Vous pouvez vous connecter à votre compte à l'aide de l'un des comptes tiers suivants :"
+msgstr ""
+"Vous pouvez vous connecter à votre compte à l'aide de l'un des comptes tiers "
+"suivants :"
 
 #: templates/socialaccount/connections.html:66
 msgid "Remove Selected"
@@ -883,7 +1178,9 @@ msgstr "Description"
 #: templates/users/about.html:22
 msgid ""
 "is an open-source media tracker that helps you organize and track your media."
-msgstr "est un suivi de médias open source qui vous aide à organiser et suivre vos médias."
+msgstr ""
+"est un suivi de médias open source qui vous aide à organiser et suivre vos "
+"médias."
 
 #: templates/users/about.html:29
 msgid "Links"
@@ -995,20 +1292,28 @@ msgstr "Vider le cache de recherche"
 msgid ""
 "Yamtrack stores your search results in a cache to speed up performance and "
 "reduce API calls."
-msgstr "Yamtrack stocke vos résultats de recherche dans un cache pour améliorer les performances et réduire les appels API."
+msgstr ""
+"Yamtrack stocke vos résultats de recherche dans un cache pour améliorer les "
+"performances et réduire les appels API."
 
 #: templates/users/advanced.html:28
 msgid "Normally, these cached results expire automatically after 24 hours."
-msgstr "Normalement, ces résultats mis en cache expirent automatiquement après 24 heures."
+msgstr ""
+"Normalement, ces résultats mis en cache expirent automatiquement après 24 "
+"heures."
 
 #: templates/users/advanced.html:29
 msgid ""
 "If your search results appear outdated, you can clear the cache manually."
-msgstr "Si vos résultats de recherche semblent obsolètes, vous pouvez vider le cache manuellement."
+msgstr ""
+"Si vos résultats de recherche semblent obsolètes, vous pouvez vider le cache "
+"manuellement."
 
 #: templates/users/advanced.html:31
 msgid "Your next search may be slightly slower as fresh data is retrieved."
-msgstr "Votre prochaine recherche peut être légèrement plus lente, le temps de récupérer des données à jour."
+msgstr ""
+"Votre prochaine recherche peut être légèrement plus lente, le temps de "
+"récupérer des données à jour."
 
 #: templates/users/base.html:9
 msgid "Configure your account and preferences"
@@ -1058,7 +1363,9 @@ msgstr "Exporter"
 
 #: templates/users/export_data.html:14
 msgid "Back up your data or export it for use with other services."
-msgstr "Sauvegardez vos données ou exportez-les pour les utiliser avec d'autres services."
+msgstr ""
+"Sauvegardez vos données ou exportez-les pour les utiliser avec d'autres "
+"services."
 
 #: templates/users/export_data.html:15
 msgid "Your export will include all your media items."
@@ -1119,7 +1426,9 @@ msgstr "Sources d'import"
 
 #: templates/users/import_data.html:63
 msgid "Some of these require additional configuration, check the"
-msgstr "Certaines d'entre elles nécessitent une configuration supplémentaire, consultez le"
+msgstr ""
+"Certaines d'entre elles nécessitent une configuration supplémentaire, "
+"consultez le"
 
 #: templates/users/import_data.html:66
 msgid "import configuration guide"
@@ -1193,13 +1502,17 @@ msgstr "ID Steam 64 bits"
 
 #: templates/users/import_data.html:327
 msgid "Find it on your Steam account details page under your username."
-msgstr "Trouvez-le sur la page des détails de votre compte Steam, sous votre nom d'utilisateur."
+msgstr ""
+"Trouvez-le sur la page des détails de votre compte Steam, sous votre nom "
+"d'utilisateur."
 
 #: templates/users/import_data.html:330
 msgid ""
 "Your profile must be public if the API key you are using is not linked to "
 "the steamid you are requesting."
-msgstr "Votre profil doit être public si la clé API que vous utilisez n'est pas liée au steamid que vous demandez."
+msgstr ""
+"Votre profil doit être public si la clé API que vous utilisez n'est pas liée "
+"au steamid que vous demandez."
 
 #: templates/users/import_data.html:404
 msgid "Active Periodic Imports"
@@ -1209,7 +1522,9 @@ msgstr "Imports périodiques actifs"
 msgid ""
 "Automated imports that run on a schedule. These will continue to sync your "
 "media until disabled."
-msgstr "Imports automatisés qui s'exécutent selon un calendrier. Ils continueront à synchroniser vos médias jusqu'à leur désactivation."
+msgstr ""
+"Imports automatisés qui s'exécutent selon un calendrier. Ils continueront à "
+"synchroniser vos médias jusqu'à leur désactivation."
 
 #: templates/users/import_data.html:428
 #, python-format
@@ -1237,7 +1552,9 @@ msgstr "Aucun import périodique configuré"
 
 #: templates/users/import_data.html:437
 msgid "Set up an import with a daily or 2-day frequency to see it here"
-msgstr "Configurez un import avec une fréquence quotidienne ou de 2 jours pour le voir ici"
+msgstr ""
+"Configurez un import avec une fréquence quotidienne ou de 2 jours pour le "
+"voir ici"
 
 #: templates/users/import_data.html:447
 msgid "Import History"
@@ -1250,10 +1567,6 @@ msgstr "Affichage de l'activité d'import des 7 derniers jours."
 #: templates/users/import_data.html:459
 msgid "Finished"
 msgstr "Terminé"
-
-#: templates/users/import_data.html:461
-msgid "Success"
-msgstr "Réussi"
 
 #: templates/users/import_data.html:465
 msgid "Started"
@@ -1281,7 +1594,8 @@ msgstr "Aucun import au cours des 7 derniers jours"
 
 #: templates/users/import_data.html:506
 msgid "Import your media from any source to see the history here"
-msgstr "Importez vos médias depuis n'importe quelle source pour voir l'historique ici"
+msgstr ""
+"Importez vos médias depuis n'importe quelle source pour voir l'historique ici"
 
 #: templates/users/integrations.html:21
 msgid "Token"
@@ -1290,7 +1604,9 @@ msgstr "Jeton"
 #: templates/users/integrations.html:23
 msgid ""
 "This token is used to authenticate webhook requests from your media servers."
-msgstr "Ce jeton est utilisé pour authentifier les requêtes webhook de vos serveurs multimédias."
+msgstr ""
+"Ce jeton est utilisé pour authentifier les requêtes webhook de vos serveurs "
+"multimédias."
 
 #: templates/users/integrations.html:32 templates/users/integrations.html:168
 #: templates/users/integrations.html:198 templates/users/integrations.html:233
@@ -1313,7 +1629,9 @@ msgstr "Serveurs multimédias"
 #: templates/users/integrations.html:60
 msgid ""
 "Connect your media servers to automatically track your watching progress."
-msgstr "Connectez vos serveurs multimédias pour suivre automatiquement votre progression de visionnage."
+msgstr ""
+"Connectez vos serveurs multimédias pour suivre automatiquement votre "
+"progression de visionnage."
 
 #: templates/users/integrations.html:64
 msgid "Integration services"
@@ -1321,7 +1639,9 @@ msgstr "Services d'intégration"
 
 #: templates/users/integrations.html:99
 msgid "Connect Jellyfin to automatically track your watching progress."
-msgstr "Connectez Jellyfin pour suivre automatiquement votre progression de visionnage."
+msgstr ""
+"Connectez Jellyfin pour suivre automatiquement votre progression de "
+"visionnage."
 
 #: templates/users/integrations.html:101
 msgid "Webhook Events"
@@ -1331,7 +1651,10 @@ msgstr "Événements webhook"
 msgid ""
 "Play and Stop events are always processed. Enable these to sync manual "
 "watched changes from the unofficial Webhooks plugin."
-msgstr "Les événements Play et Stop sont toujours traités. Activez ces options pour synchroniser les changements de visionnage manuels du plugin Webhooks non officiel."
+msgstr ""
+"Les événements Play et Stop sont toujours traités. Activez ces options pour "
+"synchroniser les changements de visionnage manuels du plugin Webhooks non "
+"officiel."
 
 #: templates/users/integrations.html:113
 msgid "Process MarkPlayed events"
@@ -1339,7 +1662,9 @@ msgstr "Traiter les événements MarkPlayed"
 
 #: templates/users/integrations.html:115
 msgid "Mark media as watched when it is manually marked played in Jellyfin."
-msgstr "Marquer un média comme vu lorsqu'il est manuellement marqué comme lu dans Jellyfin."
+msgstr ""
+"Marquer un média comme vu lorsqu'il est manuellement marqué comme lu dans "
+"Jellyfin."
 
 #: templates/users/integrations.html:130
 msgid "Process MarkUnplayed events"
@@ -1349,7 +1674,10 @@ msgstr "Traiter les événements MarkUnplayed"
 msgid ""
 "Remove watched progress when it is manually marked unplayed in Jellyfin. "
 "This event can delete media from Yamtrack."
-msgstr "Supprimer la progression de visionnage lorsqu'un média est manuellement marqué comme non lu dans Jellyfin. Cet événement peut supprimer des médias de Yamtrack."
+msgstr ""
+"Supprimer la progression de visionnage lorsqu'un média est manuellement "
+"marqué comme non lu dans Jellyfin. Cet événement peut supprimer des médias "
+"de Yamtrack."
 
 #: templates/users/integrations.html:155
 msgid "Official Webhook Plugin"
@@ -1357,13 +1685,17 @@ msgstr "Plugin Webhook officiel"
 
 #: templates/users/integrations.html:157 templates/users/integrations.html:210
 msgid "You will need to have TMDB and TVDB as metadata providers in Jellyfin."
-msgstr "Vous devrez avoir TMDB et TVDB comme fournisseurs de métadonnées dans Jellyfin."
+msgstr ""
+"Vous devrez avoir TMDB et TVDB comme fournisseurs de métadonnées dans "
+"Jellyfin."
 
 #: templates/users/integrations.html:158
 msgid ""
 "Install the Webhook plugin from the 'Jellyfin Stable' repo via your server's "
 "Plugin Catalog."
-msgstr "Installez le plugin Webhook depuis le dépôt « Jellyfin Stable » via le catalogue de plugins de votre serveur."
+msgstr ""
+"Installez le plugin Webhook depuis le dépôt « Jellyfin Stable » via le "
+"catalogue de plugins de votre serveur."
 
 #: templates/users/integrations.html:160 templates/users/integrations.html:227
 msgid "Restart your server, then configure the plugin:"
@@ -1372,7 +1704,9 @@ msgstr "Redémarrez votre serveur, puis configurez le plugin :"
 #: templates/users/integrations.html:162
 msgid ""
 "Click on the \"Add Generic Destination\" button to create a new webhook."
-msgstr "Cliquez sur le bouton « Add Generic Destination » pour créer un nouveau webhook."
+msgstr ""
+"Cliquez sur le bouton « Add Generic Destination » pour créer un nouveau "
+"webhook."
 
 #: templates/users/integrations.html:163
 msgid "Name:"
@@ -1433,7 +1767,8 @@ msgstr "Événements : Play, Stop, MarkPlayed et MarkUnplayed"
 
 #: templates/users/integrations.html:254
 msgid "Connect Plex to automatically track your watching progress."
-msgstr "Connectez Plex pour suivre automatiquement votre progression de visionnage."
+msgstr ""
+"Connectez Plex pour suivre automatiquement votre progression de visionnage."
 
 #: templates/users/integrations.html:256
 msgid "Plex Usernames"
@@ -1443,7 +1778,9 @@ msgstr "Noms d'utilisateur Plex"
 msgid ""
 "This username (or several, comma separated) will be used to filter which "
 "events are sent to your webhook."
-msgstr "Ce nom d'utilisateur (ou plusieurs, séparés par des virgules) sera utilisé pour filtrer les événements envoyés à votre webhook."
+msgstr ""
+"Ce nom d'utilisateur (ou plusieurs, séparés par des virgules) sera utilisé "
+"pour filtrer les événements envoyés à votre webhook."
 
 #: templates/users/integrations.html:268
 msgid "username1, username2, username3"
@@ -1473,11 +1810,14 @@ msgstr "Webhooks"
 msgid ""
 "In the Webhooks section, click on \"Add Webhook\" and enter the following "
 "URL:"
-msgstr "Dans la section Webhooks, cliquez sur « Add Webhook » et saisissez l'URL suivante :"
+msgstr ""
+"Dans la section Webhooks, cliquez sur « Add Webhook » et saisissez l'URL "
+"suivante :"
 
 #: templates/users/integrations.html:321
 msgid "Connect Emby to automatically track your watching progress."
-msgstr "Connectez Emby pour suivre automatiquement votre progression de visionnage."
+msgstr ""
+"Connectez Emby pour suivre automatiquement votre progression de visionnage."
 
 #: templates/users/integrations.html:325
 msgid "In Emby, go to Settings > Notifications"
@@ -1506,11 +1846,14 @@ msgstr "Limiter les événements utilisateur à : Votre utilisateur Emby"
 #: templates/users/integrations.html:349
 msgid ""
 "\"Limit library events to\" and \"Limit devices events to\" are optional"
-msgstr "« Limit library events to » et « Limit devices events to » sont facultatifs"
+msgstr ""
+"« Limit library events to » et « Limit devices events to » sont facultatifs"
 
 #: templates/users/notifications.html:19
 msgid "Configure how you want to receive notifications about your media."
-msgstr "Configurez la manière dont vous souhaitez recevoir les notifications concernant vos médias."
+msgstr ""
+"Configurez la manière dont vous souhaitez recevoir les notifications "
+"concernant vos médias."
 
 #: templates/users/notifications.html:27
 msgid "Apprise URLs"
@@ -1544,7 +1887,9 @@ msgstr "Saisissez une URL par ligne. Exemple :"
 msgid ""
 "Enter each Apprise URL on a separate line to send notifications to multiple "
 "services."
-msgstr "Saisissez chaque URL Apprise sur une ligne distincte pour envoyer des notifications à plusieurs services."
+msgstr ""
+"Saisissez chaque URL Apprise sur une ligne distincte pour envoyer des "
+"notifications à plusieurs services."
 
 #: templates/users/notifications.html:66
 msgid "Notification Settings"
@@ -1558,7 +1903,9 @@ msgstr "Activer le résumé quotidien"
 msgid ""
 "Receive a single notification each day with all media scheduled to release "
 "that day"
-msgstr "Recevez une seule notification chaque jour avec tous les médias dont la sortie est prévue ce jour-là"
+msgstr ""
+"Recevez une seule notification chaque jour avec tous les médias dont la "
+"sortie est prévue ce jour-là"
 
 #: templates/users/notifications.html:97
 msgid "Receive notifications for recently released media"
@@ -1566,7 +1913,8 @@ msgstr "Recevoir des notifications pour les médias récemment sortis"
 
 #: templates/users/notifications.html:99
 msgid "Get notified when new episodes, chapters, or other media are released"
-msgstr "Soyez averti lorsque de nouveaux épisodes, chapitres ou autres médias sortent"
+msgstr ""
+"Soyez averti lorsque de nouveaux épisodes, chapitres ou autres médias sortent"
 
 #: templates/users/notifications.html:119
 msgid "Test Notifications"
@@ -1602,7 +1950,11 @@ msgid ""
 "cleaner mobile experience.\n"
 "              On desktop, the overlay will still appear when you hover your "
 "mouse over media cards."
-msgstr "Masquez la superposition au survol des cartes média avec les boutons d'action sur les appareils tactiles pour une expérience mobile plus épurée.\n              Sur ordinateur, la superposition apparaîtra toujours lorsque vous survolez les cartes média avec la souris."
+msgstr ""
+"Masquez la superposition au survol des cartes média avec les boutons "
+"d'action sur les appareils tactiles pour une expérience mobile plus épurée.\n"
+"              Sur ordinateur, la superposition apparaîtra toujours lorsque "
+"vous survolez les cartes média avec la souris."
 
 #: templates/users/preferences.html:50
 msgid "Obfuscate Unseen Episodes"
@@ -1610,7 +1962,9 @@ msgstr "Masquer les épisodes non vus"
 
 #: templates/users/preferences.html:52
 msgid "When enabled, unseen episode images and descriptions will be blurred."
-msgstr "Lorsque cette option est activée, les images et descriptions des épisodes non vus seront floutées."
+msgstr ""
+"Lorsque cette option est activée, les images et descriptions des épisodes "
+"non vus seront floutées."
 
 #: templates/users/preferences.html:71
 msgid "Bulk Completion Date"
@@ -1620,7 +1974,9 @@ msgstr "Date de fin groupée"
 msgid ""
 "When marking a TV show or season as completed, its episodes will be marked "
 "as completed with this date."
-msgstr "Lorsqu'une série ou une saison est marquée comme terminée, ses épisodes seront marqués comme terminés avec cette date."
+msgstr ""
+"Lorsqu'une série ou une saison est marquée comme terminée, ses épisodes "
+"seront marqués comme terminés avec cette date."
 
 #: templates/users/preferences.html:93
 msgid "Show progress bar on media items"
@@ -1630,7 +1986,9 @@ msgstr "Afficher une barre de progression sur les médias"
 msgid ""
 "Display a progress bar on media items. Items which don't have max progress "
 "will be using a dotted line."
-msgstr "Affiche une barre de progression sur les médias. Les éléments sans progression maximale utiliseront une ligne pointillée."
+msgstr ""
+"Affiche une barre de progression sur les médias. Les éléments sans "
+"progression maximale utiliseront une ligne pointillée."
 
 #: templates/users/preferences.html:116
 msgid "Hide completed media in recommendations"
@@ -1640,7 +1998,9 @@ msgstr "Masquer les médias terminés dans les recommandations"
 msgid ""
 "Hide media you've already completed from the recommendations section on "
 "detail pages."
-msgstr "Masquez les médias que vous avez déjà terminés de la section des recommandations sur les pages de détail."
+msgstr ""
+"Masquez les médias que vous avez déjà terminés de la section des "
+"recommandations sur les pages de détail."
 
 #: templates/users/preferences.html:139
 msgid "Hide zero ratings"
@@ -1648,7 +2008,9 @@ msgstr "Masquer les notes à zéro"
 
 #: templates/users/preferences.html:141
 msgid "Hide the rating badge from media cards when the rating is zero."
-msgstr "Masque le badge de note sur les cartes média lorsque la note est égale à zéro."
+msgstr ""
+"Masque le badge de note sur les cartes média lorsque la note est égale à "
+"zéro."
 
 #: templates/users/preferences.html:160
 msgid "Date Format"
@@ -1656,7 +2018,8 @@ msgstr "Format de date"
 
 #: templates/users/preferences.html:162
 msgid "Choose how dates are displayed throughout the application."
-msgstr "Choisissez la manière dont les dates sont affichées dans toute l'application."
+msgstr ""
+"Choisissez la manière dont les dates sont affichées dans toute l'application."
 
 #: templates/users/preferences.html:180
 msgid "Time Format"
@@ -1672,7 +2035,9 @@ msgstr "Premier jour de la semaine"
 
 #: templates/users/preferences.html:202
 msgid "Choose which day the week starts on for calendars and statistics."
-msgstr "Choisissez le jour de début de la semaine pour les calendriers et les statistiques."
+msgstr ""
+"Choisissez le jour de début de la semaine pour les calendriers et les "
+"statistiques."
 
 #: templates/users/preferences.html:220
 msgid "Watch provider region"
@@ -1682,7 +2047,9 @@ msgstr "Région des fournisseurs de streaming"
 msgid ""
 "Choose the region to show watch providers for. Setting this to disabled will "
 "hide the box from the media page."
-msgstr "Choisissez la région pour laquelle afficher les fournisseurs de streaming. En désactivant cette option, l'encadré sera masqué de la page du média."
+msgstr ""
+"Choisissez la région pour laquelle afficher les fournisseurs de streaming. "
+"En désactivant cette option, l'encadré sera masqué de la page du média."
 
 #: templates/users/preferences.html:242
 msgid "Media Types"
@@ -1692,8 +2059,69 @@ msgstr "Types de média"
 msgid ""
 "Control which media types are visible throughout the app (sidebar, search, "
 "calendar, notifications)."
-msgstr "Contrôlez quels types de média sont visibles dans toute l'application (barre latérale, recherche, calendrier, notifications)."
+msgstr ""
+"Contrôlez quels types de média sont visibles dans toute l'application (barre "
+"latérale, recherche, calendrier, notifications)."
 
 #: templates/users/preferences.html:275
 msgid "Save Preferences"
 msgstr "Enregistrer les préférences"
+
+#: users/views.py:41
+msgid "Your profile has been updated!"
+msgstr "Votre profil a été mis à jour !"
+
+#: users/views.py:66
+msgid "Your password has been updated!"
+msgstr "Votre mot de passe a été mis à jour !"
+
+#: users/views.py:93
+msgid "Notification settings updated successfully!"
+msgstr "Paramètres de notification mis à jour avec succès !"
+
+#: users/views.py:192
+msgid "No notification URLs configured."
+msgstr "Aucune URL de notification configurée."
+
+#: users/views.py:208
+msgid "Test notification sent successfully!"
+msgstr "Notification de test envoyée avec succès !"
+
+#: users/views.py:210
+msgid "Failed to send test notification."
+msgstr "Échec de l'envoi de la notification de test."
+
+#: users/views.py:240
+msgid "This section is view-only for demo accounts."
+msgstr "Cette section est en lecture seule pour les comptes de démonstration."
+
+#: users/views.py:284
+msgid "Settings updated."
+msgstr "Paramètres mis à jour."
+
+#: users/views.py:330
+msgid "Import schedule deleted."
+msgstr "Planification d'import supprimée."
+
+#: users/views.py:332
+msgid "Import schedule not found."
+msgstr "Planification d'import introuvable."
+
+#: users/views.py:342
+msgid "Token regenerated successfully."
+msgstr "Token régénéré avec succès."
+
+#: users/views.py:367
+msgid "Plex usernames updated successfully"
+msgstr "Noms d'utilisateur Plex mis à jour avec succès"
+
+#: users/views.py:387
+msgid "Jellyfin webhook settings updated successfully"
+msgstr "Paramètres du webhook Jellyfin mis à jour avec succès"
+
+#: users/views.py:400
+#, python-format
+msgid "Successfully cleared %(count)d search entry"
+msgid_plural "Successfully cleared %(count)d search entries"
+msgstr[0] "%(count)d entrée de recherche supprimée avec succès"
+msgstr[1] "%(count)d entrées de recherche supprimées avec succès"
