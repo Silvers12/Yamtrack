@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load app_tags %}
+{% load i18n %}
 
 {% block title %}
   {% if request.user != target_user %}{{ target_user.username }}'s{% endif %}
@@ -126,12 +127,12 @@
           <a :href="`{% url 'medialist' target_user.username media_type %}?${search ? 'search=' + search + '&' : ''}${status !== 'all' ? 'status=' + status + '&' : ''}${sort !== 'score' ? 'sort=' + sort + '&' : ''}layout=grid`"
              class="p-2 cursor-pointer"
              :class="layout === 'grid' ? 'bg-indigo-600 text-white' : 'bg-[#39404b] hover:bg-[#454d5a]'"
-             title="Grid View"
+             title="{% trans "Grid View" %}"
              @click="layout = 'grid'">{% include "app/icons/four-square.svg" with classes="w-5 h-5" %}</a>
           <a :href="`{% url 'medialist' target_user.username media_type %}?${search ? 'search=' + search + '&' : ''}${status !== 'all' ? 'status=' + status + '&' : ''}${sort !== 'score' ? 'sort=' + sort + '&' : ''}layout=table`"
              class="p-2 cursor-pointer"
              :class="layout === 'table' ? 'bg-indigo-600 text-white' : 'bg-[#39404b] hover:bg-[#454d5a]'"
-             title="Table View"
+             title="{% trans "Table View" %}"
              @click="layout = 'table'">{% include "app/icons/table.svg" with classes="w-5 h-5" %}</a>
         </div>
       </div>
@@ -144,14 +145,14 @@
           <div class="bg-[#39404b] rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
             {% include "app/icons/edit.svg" with classes="w-8 h-8 text-gray-400" %}
           </div>
-          <h3 class="text-xl font-semibold mb-2">No {{ media_type|media_type_readable_plural }} Tracked Yet</h3>
+          <h3 class="text-xl font-semibold mb-2">{% blocktranslate with media_types=media_type|media_type_readable_plural %}No {{ media_types }} Tracked Yet{% endblocktranslate %}</h3>
           {% if request.user == target_user %}
             <p class="text-gray-400 mb-6">
-              Start tracking your {{ media_type_plural }} to keep a record of what you've {{ media_type|media_past_verb }}.
+              {% blocktranslate with verb=media_type|media_past_verb %}Start tracking your {{ media_type_plural }} to keep a record of what you've {{ verb }}.{% endblocktranslate %}
             </p>
             <a href="{{ media_type|sample_search }}"
                class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
-              Browse {{ media_type|media_type_readable_plural }}
+              {% blocktranslate with media_types=media_type|media_type_readable_plural %}Browse {{ media_types }}{% endblocktranslate %}
             </a>
           {% endif %}
         </div>
@@ -164,13 +165,13 @@
           <thead class="text-left text-gray-400 text-sm">
             <tr>
               <th class="p-2 w-15"></th>
-              <th class="p-2 pe-8 w-2/5">Title</th>
-              <th class="p-2 text-center">Score</th>
-              {% if media_type != MediaTypes.MOVIE.value %}<th class="p-2 text-center">Progress</th>{% endif %}
-              {% if media_type == MediaTypes.TV.value %}<th class="p-2 text-center">Last Watched</th>{% endif %}
-              <th class="p-2 text-center">Status</th>
-              <th class="p-2 text-center">Start Date</th>
-              <th class="p-2 text-center">End Date</th>
+              <th class="p-2 pe-8 w-2/5">{% trans "Title" %}</th>
+              <th class="p-2 text-center">{% trans "Score" %}</th>
+              {% if media_type != MediaTypes.MOVIE.value %}<th class="p-2 text-center">{% trans "Progress" %}</th>{% endif %}
+              {% if media_type == MediaTypes.TV.value %}<th class="p-2 text-center">{% trans "Last Watched" %}</th>{% endif %}
+              <th class="p-2 text-center">{% trans "Status" %}</th>
+              <th class="p-2 text-center">{% trans "Start Date" %}</th>
+              <th class="p-2 text-center">{% trans "End Date" %}</th>
             </tr>
           </thead>
           <tbody>
@@ -196,7 +197,7 @@
   {% if target_user != request.user %}
     <ul class="space-y-1 mb-6 {% if request.user.is_authenticated %}border-t border-[#2c3136] pt-4{% endif %}">
       <li>
-        <span class="flex font-bold items-center space-x-3 px-4 py-2 rounded-md transition-colors duration-200 text-sm text-white">{{ target_user.username }}'s Media:</span>
+        <span class="flex font-bold items-center space-x-3 px-4 py-2 rounded-md transition-colors duration-200 text-sm text-white">{% blocktranslate with username=target_user.username %}{{ username }}'s Media:{% endblocktranslate %}</span>
       </li>
       {% get_sidebar_media_types target_user as sidebar_media_types %}
       {% for item in sidebar_media_types %}
@@ -239,7 +240,7 @@
             <polyline points="10 17 15 12 10 7"></polyline>
             <line x1="15" x2="3" y1="12" y2="12"></line>
           </svg>
-          Sign In
+          {% trans "Sign In" %}
         </a>
       </div>
     </div>
