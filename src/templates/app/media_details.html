@@ -468,9 +468,9 @@
             <div class="mb-4">
               <h3 class="text-sm font-semibold text-gray-400">{{ key|detail_label|upper }}</h3>
               {% if value|is_list %}
-                {% for item in value %}<p class="text-gray-200">{{ item|iso_date_format:request.user }}</p>{% endfor %}
+                {% for item in value %}<p class="text-gray-200">{{ item|iso_date_format:request.user|detail_value }}</p>{% endfor %}
               {% else %}
-                <p class="text-gray-200">{{ value|iso_date_format:request.user|default_if_none:unknown_label }}</p>
+                <p class="text-gray-200">{{ value|iso_date_format:request.user|default_if_none:unknown_label|detail_value }}</p>
               {% endif %}
             </div>
           {% endfor %}

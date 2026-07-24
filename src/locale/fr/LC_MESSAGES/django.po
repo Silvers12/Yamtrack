@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Yamtrack\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 20:19+0000\n"
+"POT-Creation-Date: 2026-07-24 20:23+0000\n"
 "PO-Revision-Date: 2026-07-24 21:00+0200\n"
 "Last-Translator: Silvers\n"
 "Language-Team: French\n"
@@ -90,7 +90,7 @@ msgstr "Série TV"
 msgid "TV Season"
 msgstr "Saison TV"
 
-#: app/models.py:59
+#: app/models.py:59 app/templatetags/app_tags.py:246
 msgid "Movie"
 msgstr "Film"
 
@@ -355,6 +355,46 @@ msgstr "Similaires"
 #: app/templatetags/app_tags.py:224
 msgid "Recommendations"
 msgstr "Recommandations"
+
+#: app/templatetags/app_tags.py:247
+msgid "TV"
+msgstr "Série TV"
+
+#: app/templatetags/app_tags.py:249
+msgid "Returning Series"
+msgstr "En cours de diffusion"
+
+#: app/templatetags/app_tags.py:250
+msgid "Ended"
+msgstr "Terminée"
+
+#: app/templatetags/app_tags.py:251 app/templatetags/app_tags.py:252
+msgid "Canceled"
+msgstr "Annulée"
+
+#: app/templatetags/app_tags.py:253
+msgid "Planned"
+msgstr "Prévue"
+
+#: app/templatetags/app_tags.py:254
+msgid "In Production"
+msgstr "En production"
+
+#: app/templatetags/app_tags.py:255
+msgid "Pilot"
+msgstr "Pilote"
+
+#: app/templatetags/app_tags.py:257
+msgid "Released"
+msgstr "Sortie"
+
+#: app/templatetags/app_tags.py:258
+msgid "Rumored"
+msgstr "Rumeur"
+
+#: app/templatetags/app_tags.py:259
+msgid "Post Production"
+msgstr "Post-production"
 
 #: app/views.py:410
 msgid "Manual items cannot be synced."

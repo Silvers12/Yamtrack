@@ -238,6 +238,36 @@ def related_label(key):
     return _RELATED_LABELS.get(key, key.replace("_", " "))
 
 
+# Known finite detail VALUES worth translating (media format + provider status
+# strings, which come back in English from the APIs). Applied at display time
+# so the cached details dict keeps English values. Unknown values (studio /
+# country / language names, etc.) pass through untranslated.
+_DETAIL_VALUES = {
+    "Movie": _("Movie"),
+    "TV": _("TV"),
+    # TMDB TV statuses
+    "Returning Series": _("Returning Series"),
+    "Ended": _("Ended"),
+    "Canceled": _("Canceled"),
+    "Cancelled": _("Canceled"),
+    "Planned": _("Planned"),
+    "In Production": _("In Production"),
+    "Pilot": _("Pilot"),
+    # TMDB movie statuses
+    "Released": _("Released"),
+    "Rumored": _("Rumored"),
+    "Post Production": _("Post Production"),
+}
+
+
+@register.filter
+def detail_value(value):
+    """Translate a known finite detail value; pass through anything else."""
+    if isinstance(value, str):
+        return _DETAIL_VALUES.get(value, value)
+    return value
+
+
 @register.filter
 def media_status_readable(media_status):
     """Return the readable media status."""
