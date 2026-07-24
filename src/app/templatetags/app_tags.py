@@ -172,6 +172,72 @@ def media_type_readable_plural(media_type):
     return _MEDIA_TYPE_PLURALS.get(media_type, MediaTypes(media_type).label)
 
 
+# Translated display labels for the keys of the `details` dict built by the
+# providers. Keys stay English (identifiers); only the display label is
+# translated. Unknown keys fall back to a de-underscored version.
+_DETAIL_LABELS = {
+    "author": _("Author"),
+    "authors": _("Authors"),
+    "broadcast": _("Broadcast"),
+    "companies": _("Companies"),
+    "country": _("Country"),
+    "designers": _("Designers"),
+    "end_date": _("End date"),
+    "episodes": _("Episodes"),
+    "first_air_date": _("First air date"),
+    "format": _("Format"),
+    "isbn": _("ISBN"),
+    "issues_count": _("Issues count"),
+    "languages": _("Languages"),
+    "last_air_date": _("Last air date"),
+    "last_issue_name": _("Last issue name"),
+    "last_issue_number": _("Last issue number"),
+    "last_updated": _("Last updated"),
+    "latest_chapter_translated": _("Latest chapter translated"),
+    "min_age": _("Min age"),
+    "number_of_chapters": _("Number of chapters"),
+    "number_of_pages": _("Number of pages"),
+    "people": _("People"),
+    "physical_format": _("Physical format"),
+    "platforms": _("Platforms"),
+    "players": _("Players"),
+    "playtime": _("Playtime"),
+    "publish_date": _("Publish date"),
+    "publisher": _("Publisher"),
+    "publishers": _("Publishers"),
+    "release_date": _("Release date"),
+    "runtime": _("Runtime"),
+    "season": _("Season"),
+    "seasons": _("Seasons"),
+    "source": _("Source"),
+    "start_date": _("Start date"),
+    "status": _("Status"),
+    "status_in_country_of_origin": _("Status in country of origin"),
+    "studios": _("Studios"),
+    "themes": _("Themes"),
+    "total_runtime": _("Total runtime"),
+    "year": _("Year"),
+}
+
+_RELATED_LABELS = {
+    "related": _("Related"),
+    "recommendations": _("Recommendations"),
+    "seasons": _("Seasons"),
+}
+
+
+@register.filter
+def detail_label(key):
+    """Translated display label for a media-details dict key."""
+    return _DETAIL_LABELS.get(key, key.replace("_", " "))
+
+
+@register.filter
+def related_label(key):
+    """Translated display label for a related-media section key."""
+    return _RELATED_LABELS.get(key, key.replace("_", " "))
+
+
 @register.filter
 def media_status_readable(media_status):
     """Return the readable media status."""

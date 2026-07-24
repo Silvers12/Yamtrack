@@ -463,13 +463,14 @@
 
       <div class="bg-[#2a2f35] p-4 rounded-lg text-center md:text-start">
         {% if media.details.items %}
+          {% trans "Unknown" as unknown_label %}
           {% for key, value in media.details.items %}
             <div class="mb-4">
-              <h3 class="text-sm font-semibold text-gray-400">{{ key|no_underscore|upper }}</h3>
+              <h3 class="text-sm font-semibold text-gray-400">{{ key|detail_label|upper }}</h3>
               {% if value|is_list %}
                 {% for item in value %}<p class="text-gray-200">{{ item|iso_date_format:request.user }}</p>{% endfor %}
               {% else %}
-                <p class="text-gray-200">{{ value|default_if_none:"Unknown"|iso_date_format:request.user }}</p>
+                <p class="text-gray-200">{{ value|iso_date_format:request.user|default_if_none:unknown_label }}</p>
               {% endif %}
             </div>
           {% endfor %}
@@ -527,7 +528,7 @@
                 {% if name == "dlcs" %}
                   {% trans "DLCs" %}
                 {% else %}
-                  {{ name|no_underscore|title }}
+                  {{ name|related_label|title }}
                 {% endif %}
               </h2>
               <div class="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-4">
@@ -579,7 +580,8 @@
                               :class="{ 'blur': obfuscated, 'cursor-pointer': obfuscated, 'cursor-text': !obfuscated }"
                               @click="obfuscated = false">{{ episode.title }}</h2>
                           <p class="text-sm text-gray-400">
-                            {% blocktranslate with number=episode.episode_number %}Episode {{ number }}{% endblocktranslate %} • {{ episode.air_date|iso_date_format:request.user|default_if_none:"Unknown air date" }}
+                            {% trans "Unknown air date" as unknown_air_date %}
+                            {% blocktranslate with number=episode.episode_number %}Episode {{ number }}{% endblocktranslate %} • {{ episode.air_date|iso_date_format:request.user|default_if_none:unknown_air_date }}
                             {% if episode.runtime %}• {{ episode.runtime }}{% endif %}
                           </p>
                         </div>

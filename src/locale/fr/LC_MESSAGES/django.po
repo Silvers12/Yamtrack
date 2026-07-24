@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Yamtrack\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 19:41+0000\n"
+"POT-Creation-Date: 2026-07-24 20:19+0000\n"
 "PO-Revision-Date: 2026-07-24 21:00+0200\n"
 "Last-Translator: Silvers\n"
 "Language-Team: French\n"
@@ -14,6 +14,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: app/config.py:73 app/config.py:84 app/config.py:98 app/config.py:108
+#: app/config.py:127
+msgid "watch"
+msgstr "regarder"
+
+#: app/config.py:73 app/config.py:84 app/config.py:98 app/config.py:108
+#: app/config.py:127
+msgid "watched"
+msgstr "regardé"
+
+#: app/config.py:92 app/config.py:133 app/models.py:58
+msgid "Episode"
+msgstr "Épisode"
+
+#: app/config.py:141 app/config.py:181 app/config.py:195
+msgid "read"
+msgstr "lu"
+
+#: app/config.py:152
+msgid "Chapter"
+msgstr "Chapitre"
+
+#: app/config.py:159 app/config.py:210
+msgid "play"
+msgstr "jouer"
+
+#: app/config.py:159 app/config.py:210
+msgid "played"
+msgstr "joué"
+
+#: app/config.py:188
+msgid "Page"
+msgstr "Page"
+
+#: app/config.py:203
+msgid "Issue"
+msgstr "Numéro"
+
+#: app/config.py:219
+msgid "Play"
+msgstr "Partie"
 
 #: app/forms.py:101 app/forms.py:108
 msgid "Select"
@@ -47,10 +89,6 @@ msgstr "Série TV"
 #: app/models.py:57
 msgid "TV Season"
 msgstr "Saison TV"
-
-#: app/models.py:58
-msgid "Episode"
-msgstr "Épisode"
 
 #: app/models.py:59
 msgid "Movie"
@@ -124,7 +162,8 @@ msgstr "Séries TV"
 msgid "TV Seasons"
 msgstr "Saisons TV"
 
-#: app/templatetags/app_tags.py:158 templates/app/media_details.html:551
+#: app/templatetags/app_tags.py:158 app/templatetags/app_tags.py:186
+#: templates/app/media_details.html:552
 msgid "Episodes"
 msgstr "Épisodes"
 
@@ -147,6 +186,175 @@ msgstr "BD"
 #: app/templatetags/app_tags.py:165
 msgid "Boardgames"
 msgstr "Jeux de société"
+
+#: app/templatetags/app_tags.py:179
+msgid "Author"
+msgstr "Auteur"
+
+#: app/templatetags/app_tags.py:180
+msgid "Authors"
+msgstr "Auteurs"
+
+#: app/templatetags/app_tags.py:181
+msgid "Broadcast"
+msgstr "Diffusion"
+
+#: app/templatetags/app_tags.py:182
+msgid "Companies"
+msgstr "Sociétés"
+
+#: app/templatetags/app_tags.py:183
+msgid "Country"
+msgstr "Pays"
+
+#: app/templatetags/app_tags.py:184
+msgid "Designers"
+msgstr "Concepteurs"
+
+#: app/templatetags/app_tags.py:185
+msgid "End date"
+msgstr "Date de fin"
+
+#: app/templatetags/app_tags.py:187
+msgid "First air date"
+msgstr "Première diffusion"
+
+#: app/templatetags/app_tags.py:188
+msgid "Format"
+msgstr "Format"
+
+#: app/templatetags/app_tags.py:189
+msgid "ISBN"
+msgstr "ISBN"
+
+#: app/templatetags/app_tags.py:190
+msgid "Issues count"
+msgstr "Nombre de numéros"
+
+#: app/templatetags/app_tags.py:191
+msgid "Languages"
+msgstr "Langues"
+
+#: app/templatetags/app_tags.py:192
+msgid "Last air date"
+msgstr "Dernière diffusion"
+
+#: app/templatetags/app_tags.py:193
+msgid "Last issue name"
+msgstr "Nom du dernier numéro"
+
+#: app/templatetags/app_tags.py:194
+msgid "Last issue number"
+msgstr "Numéro du dernier numéro"
+
+#: app/templatetags/app_tags.py:195
+msgid "Last updated"
+msgstr "Dernière mise à jour"
+
+#: app/templatetags/app_tags.py:196
+msgid "Latest chapter translated"
+msgstr "Dernier chapitre traduit"
+
+#: app/templatetags/app_tags.py:197
+msgid "Min age"
+msgstr "Âge minimum"
+
+#: app/templatetags/app_tags.py:198
+msgid "Number of chapters"
+msgstr "Nombre de chapitres"
+
+#: app/templatetags/app_tags.py:199
+msgid "Number of pages"
+msgstr "Nombre de pages"
+
+#: app/templatetags/app_tags.py:200
+msgid "People"
+msgstr "Personnes"
+
+#: app/templatetags/app_tags.py:201
+msgid "Physical format"
+msgstr "Format physique"
+
+#: app/templatetags/app_tags.py:202
+msgid "Platforms"
+msgstr "Plateformes"
+
+#: app/templatetags/app_tags.py:203
+msgid "Players"
+msgstr "Joueurs"
+
+#: app/templatetags/app_tags.py:204
+msgid "Playtime"
+msgstr "Durée de jeu"
+
+#: app/templatetags/app_tags.py:205
+msgid "Publish date"
+msgstr "Date de publication"
+
+#: app/templatetags/app_tags.py:206
+msgid "Publisher"
+msgstr "Éditeur"
+
+#: app/templatetags/app_tags.py:207
+msgid "Publishers"
+msgstr "Éditeurs"
+
+#: app/templatetags/app_tags.py:208
+msgid "Release date"
+msgstr "Date de sortie"
+
+#: app/templatetags/app_tags.py:209
+msgid "Runtime"
+msgstr "Durée"
+
+#: app/templatetags/app_tags.py:210
+msgid "Season"
+msgstr "Saison"
+
+#: app/templatetags/app_tags.py:211 app/templatetags/app_tags.py:225
+msgid "Seasons"
+msgstr "Saisons"
+
+#: app/templatetags/app_tags.py:212
+msgid "Source"
+msgstr "Source"
+
+#: app/templatetags/app_tags.py:213
+msgid "Start date"
+msgstr "Date de début"
+
+#: app/templatetags/app_tags.py:214 templates/app/create_entry.html:308
+#: templates/app/media_list.html:172
+msgid "Status"
+msgstr "Statut"
+
+#: app/templatetags/app_tags.py:215
+msgid "Status in country of origin"
+msgstr "Statut dans le pays d'origine"
+
+#: app/templatetags/app_tags.py:216
+msgid "Studios"
+msgstr "Studios"
+
+#: app/templatetags/app_tags.py:217
+msgid "Themes"
+msgstr "Thèmes"
+
+#: app/templatetags/app_tags.py:218
+msgid "Total runtime"
+msgstr "Durée totale"
+
+#: app/templatetags/app_tags.py:219
+msgid "Year"
+msgstr "Année"
+
+#: app/templatetags/app_tags.py:223
+msgid "Related"
+msgstr "Similaires"
+
+#: app/templatetags/app_tags.py:224
+msgid "Recommendations"
+msgstr "Recommandations"
 
 #: app/views.py:410
 msgid "Manual items cannot be synced."
@@ -470,12 +678,12 @@ msgid "Delete"
 msgstr "Supprimer"
 
 #: templates/app/components/fill_track_episode.html:14
-#: templates/app/media_details.html:590
+#: templates/app/media_details.html:592
 msgid "Track Episode"
 msgstr "Suivre l'épisode"
 
 #: templates/app/components/fill_track_episode.html:27
-#: templates/app/media_details.html:582
+#: templates/app/media_details.html:584
 #, python-format
 msgid "Episode %(number)s"
 msgstr "Épisode %(number)s"
@@ -498,7 +706,7 @@ msgid "Previous Watches"
 msgstr "Visionnages précédents"
 
 #: templates/app/components/fill_track_episode.html:52
-#: templates/app/media_details.html:659
+#: templates/app/media_details.html:661
 msgid "No date provided"
 msgstr "Aucune date fournie"
 
@@ -550,14 +758,14 @@ msgstr "Ajouter au suivi"
 #: templates/app/components/home_grid.html:44
 #: templates/app/components/media_card.html:102
 #: templates/app/components/media_card_list.html:49
-#: templates/app/media_details.html:382 templates/app/media_details.html:606
+#: templates/app/media_details.html:382 templates/app/media_details.html:608
 msgid "Add to custom lists"
 msgstr "Ajouter aux listes personnalisées"
 
 #: templates/app/components/home_grid.html:52
 #: templates/app/components/media_card.html:111
 #: templates/app/components/media_card_list.html:58
-#: templates/app/media_details.html:402 templates/app/media_details.html:628
+#: templates/app/media_details.html:402 templates/app/media_details.html:630
 msgid "View your activity history"
 msgstr "Voir votre historique d'activité"
 
@@ -577,11 +785,12 @@ msgstr ""
 "Ajoutez une entrée média personnalisée à votre collection si elle n'est pas "
 "disponible dans la base de données."
 
-#: templates/app/create_entry.html:111
+#: templates/app/create_entry.html:111 users/models.py:83
 msgid "Media Type"
 msgstr "Type de média"
 
 #: templates/app/create_entry.html:127 templates/app/media_list.html:168
+#: users/models.py:31 users/models.py:38 users/models.py:82
 msgid "Title"
 msgstr "Titre"
 
@@ -618,20 +827,17 @@ msgid "Score"
 msgstr "Note"
 
 #: templates/app/create_entry.html:278 templates/app/media_list.html:170
+#: users/models.py:39
 msgid "Progress"
 msgstr "Progression"
 
-#: templates/app/create_entry.html:308 templates/app/media_list.html:172
-msgid "Status"
-msgstr "Statut"
-
 #: templates/app/create_entry.html:322 templates/app/media_list.html:173
-#: templates/app/statistics.html:62
+#: templates/app/statistics.html:62 users/models.py:40
 msgid "Start Date"
 msgstr "Date de début"
 
 #: templates/app/create_entry.html:331 templates/app/media_list.html:174
-#: templates/app/statistics.html:69
+#: templates/app/statistics.html:69 users/models.py:41
 msgid "End Date"
 msgstr "Date de fin"
 
@@ -647,7 +853,7 @@ msgstr "Ajoutez des notes ou des commentaires..."
 msgid "Create Entry"
 msgstr "Créer une entrée"
 
-#: templates/app/home.html:6 templates/app/home.html:12 templates/base.html:88
+#: templates/app/home.html:6 templates/app/home.html:12 templates/base.html:89
 msgid "Home"
 msgstr "Accueil"
 
@@ -751,43 +957,61 @@ msgstr "préférences"
 msgid "No watch providers"
 msgstr "Aucun fournisseur de visionnage"
 
-#: templates/app/media_details.html:477
+#: templates/app/media_details.html:466
+msgid "Unknown"
+msgstr "Inconnu"
+
+#: templates/app/media_details.html:478
 msgid "SOURCE"
 msgstr "SOURCE"
 
-#: templates/app/media_details.html:484
+#: templates/app/media_details.html:485
 msgid "EXTERNAL LINKS"
 msgstr "LIENS EXTERNES"
 
-#: templates/app/media_details.html:493
+#: templates/app/media_details.html:494
 msgid "No details available"
 msgstr "Aucun détail disponible"
 
-#: templates/app/media_details.html:501
+#: templates/app/media_details.html:502
 msgid "Cast"
 msgstr "Distribution"
 
-#: templates/app/media_details.html:513
+#: templates/app/media_details.html:514
 msgid "View all"
 msgstr "Tout afficher"
 
-#: templates/app/media_details.html:514
+#: templates/app/media_details.html:515
 #, python-format
 msgid "%(count)s cast members"
 msgstr "%(count)s membres de la distribution"
 
-#: templates/app/media_details.html:528
+#: templates/app/media_details.html:529
 msgid "DLCs"
 msgstr "DLC"
 
-#: templates/app/media_details.html:655
+#: templates/app/media_details.html:583
+msgid "Unknown air date"
+msgstr "Date de diffusion inconnue"
+
+#: templates/app/media_details.html:657
 msgid "Last watched:"
 msgstr "Dernier visionnage :"
 
-#: templates/app/media_details.html:661
+#: templates/app/media_details.html:663
 #, python-format
 msgid "Watched %(count)s times"
 msgstr "Vu %(count)s fois"
+
+#: templates/app/media_list.html:42
+#, python-format
+msgid "Search %(type)s in %(username)s's list..."
+msgstr "Rechercher %(type)s dans la liste de %(username)s..."
+
+#: templates/app/media_list.html:42
+#, python-format
+msgid "Search %(type)s in your list..."
+msgstr "Rechercher %(type)s dans votre liste..."
 
 #: templates/app/media_list.html:130 templates/app/search.html:26
 msgid "Grid View"
@@ -860,7 +1084,7 @@ msgstr ""
 "l'orthographe ou d'utiliser des mots-clés différents."
 
 #: templates/app/statistics.html:7 templates/app/statistics.html:12
-#: templates/base.html:145
+#: templates/base.html:146
 msgid "Statistics"
 msgstr "Statistiques"
 
@@ -1001,25 +1225,25 @@ msgstr "Votre chronologie est vide"
 msgid "Consume media items to see them appear on your timeline."
 msgstr "Consultez des médias pour les voir apparaître dans votre chronologie."
 
-#: templates/base.html:130
+#: templates/base.html:131
 msgid "Create Custom"
 msgstr "Créer une entrée"
 
-#: templates/base.html:160 templates/lists/components/fill_lists.html:5
+#: templates/base.html:161 templates/lists/components/fill_lists.html:5
 #: templates/lists/custom_lists.html:10 templates/lists/custom_lists.html:17
 msgid "Lists"
 msgstr "Listes"
 
-#: templates/base.html:175 templates/events/calendar.html:6
+#: templates/base.html:176 templates/events/calendar.html:6
 #: templates/events/calendar.html:11
 msgid "Calendar"
 msgstr "Calendrier"
 
-#: templates/base.html:201 templates/users/base.html:8
+#: templates/base.html:202 templates/users/base.html:8
 msgid "Settings"
 msgstr "Paramètres"
 
-#: templates/base.html:210
+#: templates/base.html:211
 msgid "Logout"
 msgstr "Déconnexion"
 
@@ -1124,7 +1348,7 @@ msgstr[1] "%(counter)s collaborateurs"
 msgid "Search in collection..."
 msgstr "Rechercher dans la collection..."
 
-#: templates/lists/list_detail.html:167
+#: templates/lists/list_detail.html:167 users/models.py:47
 msgid "All"
 msgstr "Tous"
 
@@ -2066,6 +2290,82 @@ msgstr ""
 #: templates/users/preferences.html:275
 msgid "Save Preferences"
 msgstr "Enregistrer les préférences"
+
+#: users/models.py:27
+msgid "Upcoming"
+msgstr "À venir"
+
+#: users/models.py:28
+msgid "Recent"
+msgstr "Récent"
+
+#: users/models.py:29
+msgid "Completion"
+msgstr "Achèvement"
+
+#: users/models.py:30
+msgid "Episodes Left"
+msgstr "Épisodes restants"
+
+#: users/models.py:37
+msgid "Rating"
+msgstr "Note"
+
+#: users/models.py:58 users/models.py:65
+msgid "Grid"
+msgstr "Grille"
+
+#: users/models.py:59
+msgid "Table"
+msgstr "Tableau"
+
+#: users/models.py:66
+msgid "List"
+msgstr "Liste"
+
+#: users/models.py:72
+msgid "Last Item Added"
+msgstr "Dernier élément ajouté"
+
+#: users/models.py:73
+msgid "Name"
+msgstr "Nom"
+
+#: users/models.py:74
+msgid "Items Count"
+msgstr "Nombre d'éléments"
+
+#: users/models.py:75
+msgid "Newest First"
+msgstr "Plus récent d'abord"
+
+#: users/models.py:81
+msgid "Date Added"
+msgstr "Date d'ajout"
+
+#: users/models.py:89
+msgid "Current Date"
+msgstr "Date actuelle"
+
+#: users/models.py:90
+msgid "Release Date"
+msgstr "Date de sortie"
+
+#: users/models.py:91
+msgid "No Date"
+msgstr "Aucune date"
+
+#: users/models.py:114
+msgid "Monday"
+msgstr "Lundi"
+
+#: users/models.py:115
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: users/models.py:125
+msgid "Toggle profile visibility to anonymous users"
+msgstr "Basculer la visibilité du profil pour les utilisateurs anonymes"
 
 #: users/views.py:41
 msgid "Your profile has been updated!"
