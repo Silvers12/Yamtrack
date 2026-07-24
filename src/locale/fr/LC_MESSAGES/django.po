@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Yamtrack\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 20:23+0000\n"
+"POT-Creation-Date: 2026-07-24 20:41+0000\n"
 "PO-Revision-Date: 2026-07-24 21:00+0200\n"
 "Last-Translator: Silvers\n"
 "Language-Team: French\n"
@@ -395,6 +395,30 @@ msgstr "Rumeur"
 #: app/templatetags/app_tags.py:259
 msgid "Post Production"
 msgstr "Post-production"
+
+#: app/templatetags/app_tags.py:261 users/models.py:27
+msgid "Upcoming"
+msgstr "À venir"
+
+#: app/templatetags/app_tags.py:262
+msgid "Airing"
+msgstr "En diffusion"
+
+#: app/templatetags/app_tags.py:263 templates/users/import_data.html:459
+msgid "Finished"
+msgstr "Terminé"
+
+#: app/templatetags/app_tags.py:264
+msgid "Publishing"
+msgstr "En publication"
+
+#: app/templatetags/app_tags.py:265
+msgid "On Hiatus"
+msgstr "En pause"
+
+#: app/templatetags/app_tags.py:266
+msgid "Discontinued"
+msgstr "Interrompu"
 
 #: app/views.py:410
 msgid "Manual items cannot be synced."
@@ -1828,10 +1852,6 @@ msgstr "Historique des imports"
 msgid "Showing import activity from the last 7 days."
 msgstr "Affichage de l'activité d'import des 7 derniers jours."
 
-#: templates/users/import_data.html:459
-msgid "Finished"
-msgstr "Terminé"
-
 #: templates/users/import_data.html:465
 msgid "Started"
 msgstr "Commencé"
@@ -2330,10 +2350,6 @@ msgstr ""
 #: templates/users/preferences.html:275
 msgid "Save Preferences"
 msgstr "Enregistrer les préférences"
-
-#: users/models.py:27
-msgid "Upcoming"
-msgstr "À venir"
 
 #: users/models.py:28
 msgid "Recent"

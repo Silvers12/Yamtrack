@@ -257,6 +257,13 @@ _DETAIL_VALUES = {
     "Released": _("Released"),
     "Rumored": _("Rumored"),
     "Post Production": _("Post Production"),
+    # MyAnimeList (anime/manga) statuses
+    "Upcoming": _("Upcoming"),
+    "Airing": _("Airing"),
+    "Finished": _("Finished"),
+    "Publishing": _("Publishing"),
+    "On Hiatus": _("On Hiatus"),
+    "Discontinued": _("Discontinued"),
 }
 
 
