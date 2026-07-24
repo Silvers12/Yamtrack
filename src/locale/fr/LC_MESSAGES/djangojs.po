@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-24 19:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: static/js/date-range.js:15
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#: static/js/date-range.js:16
+msgid "Yesterday"
+msgstr "Hier"
+
+#: static/js/date-range.js:17
+msgid "This Week"
+msgstr "Cette semaine"
+
+#: static/js/date-range.js:18
+msgid "Last 7 Days"
+msgstr "7 derniers jours"
+
+#: static/js/date-range.js:19
+msgid "This Month"
+msgstr "Ce mois-ci"
+
+#: static/js/date-range.js:20
+msgid "Last 30 Days"
+msgstr "30 derniers jours"
+
+#: static/js/date-range.js:21
+msgid "Last 90 Days"
+msgstr "90 derniers jours"
+
+#: static/js/date-range.js:22
+msgid "This Year"
+msgstr "Cette année"
+
+#: static/js/date-range.js:23
+msgid "Last 6 Months"
+msgstr "6 derniers mois"
+
+#: static/js/date-range.js:24
+msgid "Last 12 Months"
+msgstr "12 derniers mois"
+
+#: static/js/date-range.js:25
+msgid "All Time"
+msgstr "Depuis le début"
+
+#: static/js/i18n-alpine-strings.js:11
+msgid "Show less"
+msgstr "Voir moins"
+
+#: static/js/i18n-alpine-strings.js:12
+msgid "Read more"
+msgstr "Voir plus"
+
+#: static/js/i18n-alpine-strings.js:13
+msgid "Import from YamTrack backup"
+msgstr "Importer depuis une sauvegarde YamTrack"
+
+#: static/js/i18n-alpine-strings.js:14
+msgid "Import games"
+msgstr "Importer les jeux"
+
+#: static/js/i18n-alpine-strings.js:15
+msgid "Import movies and TV shows from your ratings"
+msgstr "Importer les films et séries depuis vos notes"
+
+#: static/js/i18n-alpine-strings.js:16
+msgid "Import from GoodReads backup"
+msgstr "Importer depuis une sauvegarde GoodReads"
+
+#: static/js/i18n-alpine-strings.js:17
+msgid "File uploads are not available for periodic imports"
+msgstr "L'envoi de fichiers n'est pas disponible pour les imports périodiques"
+
+#: static/js/i18n-alpine-strings.js:18
+msgid "Hide failed items"
+msgstr "Masquer les éléments en échec"
+
+#: static/js/i18n-alpine-strings.js:19
+msgid "Show failed items"
+msgstr "Afficher les éléments en échec"
+
+#: static/js/i18n-alpine-strings.js:20
+msgid "Hide traceback"
+msgstr "Masquer la trace d'erreur"
+
+#: static/js/i18n-alpine-strings.js:21
+msgid "Show traceback"
+msgstr "Afficher la trace d'erreur"
+
+#: static/js/i18n-alpine-strings.js:22
+msgid "Last Item Added"
+msgstr "Dernier élément ajouté"
+
+#: static/js/i18n-alpine-strings.js:23
+msgid "Name"
+msgstr "Nom"
+
+#: static/js/i18n-alpine-strings.js:24
+msgid "Newest First"
+msgstr "Plus récent d'abord"
+
+#: static/js/i18n-alpine-strings.js:25
+msgid "Items Count"
+msgstr "Nombre d'éléments"
+
+#: static/js/i18n-alpine-strings.js:26
+msgid "Date Added"
+msgstr "Date d'ajout"
+
+#: static/js/i18n-alpine-strings.js:27
+msgid "Title"
+msgstr "Titre"
+
+#: static/js/i18n-alpine-strings.js:28
+msgid "Media Type"
+msgstr "Type de média"
+
+#: static/js/statistics-charts.js:35 static/js/statistics-charts.js:37
+#: static/js/statistics-charts.js:339
+msgid "Score"
+msgstr "Note"
+
+#: static/js/statistics-charts.js:346
+msgid "Number of Items"
+msgstr "Nombre d'éléments"
+
+#: static/js/statistics-charts.js:354
+msgid "Average Score: %(score)s (%(count)s %(unit)s)"
+msgstr "Note moyenne : %(score)s (%(count)s %(unit)s)"
+
+#: static/js/statistics-charts.js:358
+msgid "item"
+msgid_plural "items"
+msgstr[0] "élément"
+msgstr[1] "éléments"

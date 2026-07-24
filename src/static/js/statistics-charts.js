@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (chart.canvas.id === "scoreStackedChart") {
         const score = parseInt(title);
         if (score === 10) {
-          formattedTitle = `Score: 10`;
+          formattedTitle = `${gettext("Score")}: 10`;
         } else {
-          formattedTitle = `Score: ${score}.0-${score}.9`;
+          formattedTitle = `${gettext("Score")}: ${score}.0-${score}.9`;
         }
       }
 
@@ -336,23 +336,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add score-specific configurations
     scoreChartOptions.scales.x.title = {
       display: true,
-      text: "Score",
+      text: gettext("Score"),
       color: "#D1D5DB",
       padding: { top: 10, bottom: 0 },
     };
 
     scoreChartOptions.scales.y.title = {
       display: true,
-      text: "Number of Items",
+      text: gettext("Number of Items"),
       color: "#D1D5DB",
       padding: { top: 0, left: 10 },
     };
 
     scoreChartOptions.plugins.title = {
       display: true,
-      text: `Average Score: ${scoreData.average_score} (${
-        scoreData.total_scored
-      } ${scoreData.total_scored === 1 ? "item" : "items"})`,
+      text: interpolate(
+        gettext("Average Score: %(score)s (%(count)s %(unit)s)"),
+        {
+          score: scoreData.average_score,
+          count: scoreData.total_scored,
+          unit: ngettext("item", "items", scoreData.total_scored),
+        },
+        true,
+      ),
       color: "#D1D5DB",
       padding: { bottom: 10 },
       font: { size: 14 },

@@ -12,10 +12,18 @@ from django.conf import settings
 from django.contrib import admin
 from django.contrib.auth.decorators import login_not_required
 from django.urls import include, path
+from django.views.i18n import JavaScriptCatalog
 from health_check.views import HealthCheckView
 from redis.asyncio import Redis as RedisClient
 
 urlpatterns = [
+    # JavaScript translation catalog (provides gettext() to browser JS).
+    # login_not_required so it works on unauthenticated pages (e.g. login).
+    path(
+        "jsi18n/",
+        login_not_required(JavaScriptCatalog.as_view()),
+        name="javascript-catalog",
+    ),
     path("", include("app.urls")),
     path("", include("integrations.urls")),
     path("", include("users.urls")),

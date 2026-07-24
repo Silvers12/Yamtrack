@@ -9,19 +9,29 @@ function dateRangePicker() {
     endDate: new Date().toISOString().split("T")[0],
     customRangeLabel: "",
 
+    // `name` is the internal key used by the date logic (switch/comparisons)
+    // and must stay in English. `label` is the translated display text.
     predefinedRanges: [
-      { name: "Today" },
-      { name: "Yesterday" },
-      { name: "This Week" },
-      { name: "Last 7 Days" },
-      { name: "This Month" },
-      { name: "Last 30 Days" },
-      { name: "Last 90 Days" },
-      { name: "This Year" },
-      { name: "Last 6 Months" },
-      { name: "Last 12 Months" },
-      { name: "All Time" },
+      { name: "Today", label: gettext("Today") },
+      { name: "Yesterday", label: gettext("Yesterday") },
+      { name: "This Week", label: gettext("This Week") },
+      { name: "Last 7 Days", label: gettext("Last 7 Days") },
+      { name: "This Month", label: gettext("This Month") },
+      { name: "Last 30 Days", label: gettext("Last 30 Days") },
+      { name: "Last 90 Days", label: gettext("Last 90 Days") },
+      { name: "This Year", label: gettext("This Year") },
+      { name: "Last 6 Months", label: gettext("Last 6 Months") },
+      { name: "Last 12 Months", label: gettext("Last 12 Months") },
+      { name: "All Time", label: gettext("All Time") },
     ],
+
+    // Translated label for the currently selected range (display only).
+    get selectedRangeLabel() {
+      const match = this.predefinedRanges.find(
+        (r) => r.name === this.selectedRange,
+      );
+      return match ? match.label : this.selectedRange;
+    },
 
     init() {
       // Initialize dates from URL parameters if they exist

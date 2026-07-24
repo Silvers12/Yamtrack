@@ -57,7 +57,7 @@
                 type="button">
           {% include "app/icons/arrows-up-down.svg" with classes="w-4 h-4" %}
           <span class="text-sm"
-                x-text="sort === 'last_item_added' ? 'Last Item Added' : (sort === 'name' ? 'Name' : (sort === 'newest_first' ? 'Newest First' : 'Items Count'))"></span>
+                x-text="sort === 'last_item_added' ? gettext('Last Item Added') : (sort === 'name' ? gettext('Name') : (sort === 'newest_first' ? gettext('Newest First') : gettext('Items Count')))"></span>
           {% include "app/icons/chevron-down.svg" with classes="w-4 h-4" %}
         </button>
 

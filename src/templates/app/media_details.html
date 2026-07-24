@@ -119,7 +119,7 @@
           <button x-show="isClamped"
                   @click="isExpanded = !isExpanded"
                   class="text-indigo-400 hover:text-indigo-300 text-sm mt-2 focus:outline-none transition-colors cursor-pointer">
-            <span x-text="isExpanded ? 'Show less' : 'Read more'"></span>
+            <span x-text="isExpanded ? gettext('Show less') : gettext('Read more')"></span>
           </button>
         </div>
 
@@ -139,7 +139,7 @@
             <button x-show="isClamped"
                     @click="isExpanded = !isExpanded"
                     class="text-indigo-400 hover:text-indigo-300 text-xs mt-1 focus:outline-none transition-colors cursor-pointer">
-              <span x-text="isExpanded ? 'Show less' : 'Read more'"></span>
+              <span x-text="isExpanded ? gettext('Show less') : gettext('Read more')"></span>
             </button>
           </div>
         {% endif %}
@@ -359,7 +359,7 @@
                             <button x-show="isClamped"
                                     @click="isExpanded = !isExpanded"
                                     class="text-indigo-400 hover:text-indigo-300 text-xs mt-1 focus:outline-none transition-colors cursor-pointer">
-                              <span x-text="isExpanded ? 'Show less' : 'Read more'"></span>
+                              <span x-text="isExpanded ? gettext('Show less') : gettext('Read more')"></span>
                             </button>
                           </div>
                         </div>
