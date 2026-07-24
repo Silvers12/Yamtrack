@@ -36,7 +36,7 @@ COPY ./nginx.conf /etc/nginx/nginx.conf
 # Generate a copy of the nginx config with IPv6 support.
 RUN sed 's/listen 8000;/listen 8000; listen [::]:8000;/' /etc/nginx/nginx.conf > /etc/nginx/nginx.ipv6.conf
 
-RUN apk add --no-cache nginx shadow \
+RUN apk add --no-cache nginx shadow gettext \
     && chmod +x /entrypoint.sh \
     # create user abc for later PUID/PGID mapping
     && useradd -U -M -s /bin/sh abc \
@@ -50,6 +50,8 @@ COPY --from=builder /yamtrack/.venv /yamtrack/.venv
 # Django app
 COPY src ./
 RUN python manage.py collectstatic --noinput
+# Compile translation catalogs (.po -> .mo). No-op if no catalogs are present.
+RUN python manage.py compilemessages
 
 EXPOSE 8000
 

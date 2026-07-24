@@ -137,6 +137,9 @@ MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    # LocaleMiddleware must sit after SessionMiddleware and before CommonMiddleware
+    # so the active language is resolved from session/cookie/Accept-Language.
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -296,7 +299,17 @@ LOGGING = {
 # Internationalization
 # https://docs.djangoproject.com/en/stable/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = config("LANGUAGE_CODE", default="en-us")
+
+# Languages offered by the UI. Only languages with a compiled catalog in
+# LOCALE_PATHS will actually be translated; others fall back to the source
+# (English) strings, so adding a language here is non-breaking.
+LANGUAGES = [
+    ("en", "English"),
+    ("fr", "Français"),
+]
+
+LOCALE_PATHS = [BASE_DIR / "locale"]
 
 TIME_ZONE = config("TZ", default="UTC")
 
