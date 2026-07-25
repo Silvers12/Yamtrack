@@ -1,10 +1,17 @@
 # 🇫🇷 Yamtrack — version française
 
-Ce dépôt est un **fork traduit en français** de [Yamtrack](https://github.com/FuzzyGrim/Yamtrack), un tracker de médias auto-hébergé (films, séries, animés, mangas, jeux vidéo, livres, BD, jeux de société). Toute l'interface est traduite : menus, statuts, types de média, fiches détaillées, statistiques et messages.
+![Licence](https://img.shields.io/badge/licence-AGPL--3.0-blue)
+
+Fork **entièrement traduit en français** de [Yamtrack](https://github.com/FuzzyGrim/Yamtrack), un **tracker de médias auto-hébergé** : films, séries, animés, mangas, jeux vidéo, livres, BD et jeux de société. Toute l'interface est en français — menus, statuts, types de média, fiches détaillées, statistiques et messages.
+
+> ℹ️ Le projet d'origine est développé par [FuzzyGrim](https://github.com/FuzzyGrim/Yamtrack). Ce dépôt n'ajoute que la **traduction française** — tout le crédit de l'application revient à l'auteur original.
 
 ## 🚀 Installation rapide (Docker)
 
 Prérequis : **Docker** et **Docker Compose**.
+
+> ⚠️ **Architecture : l'image est publiée en `amd64` uniquement.**
+> Elle fonctionne sur la plupart des serveurs et PC (Intel/AMD), mais **pas nativement sur ARM** (Raspberry Pi, Mac Apple Silicon, etc.). Sur ARM, il faudrait construire une image multi-plateforme (voir `publish.sh`).
 
 ```bash
 mkdir yamtrack && cd yamtrack
@@ -30,115 +37,71 @@ Vos données (comptes, suivis) sont stockées dans `./db` et ne sont **jamais pe
 ## ⚙️ Configuration
 
 - `LANGUAGE_CODE=fr` fixe la langue de l'interface, `TMDB_LANG=fr` celle des fiches films/séries.
-- Les autres variables (domaine public via `URLS`, sous-chemin via `BASE_URL`, clés API…) sont décrites dans la [documentation officielle](https://fuzzygrim.github.io/Yamtrack/).
+- Les autres variables (domaine public via `URLS`, sous-chemin via `BASE_URL`, base PostgreSQL, clés API…) sont décrites dans la [documentation officielle](https://fuzzygrim.github.io/Yamtrack/) (en anglais).
 
-> ℹ️ La documentation ci-dessous (en anglais) concerne l'application d'origine. Le crédit du projet revient à [FuzzyGrim](https://github.com/FuzzyGrim/Yamtrack) ; ce dépôt n'ajoute que la traduction française.
+## ✨ Fonctionnalités
 
----
+- 🎬 Suivez films, séries, animés, mangas, jeux vidéo, livres, BD et jeux de société.
+- 📺 Suivez chaque saison d'une série individuellement, ainsi que les épisodes vus.
+- ⭐ Enregistrez note, statut, progression, visionnages/lectures répétés, dates de début et de fin, ou ajoutez une note personnelle.
+- 📈 Conservez un historique de suivi pour chaque action (ajout, début, reprise…).
+- ✏️ Créez des entrées personnalisées pour les médias introuvables via les API prises en charge.
+- 📂 Créez des listes personnelles pour organiser vos médias, et invitez d'autres membres à collaborer.
+- 📅 Gardez un œil sur vos sorties à venir grâce à un calendrier, abonnable dans des applications externes via une URL iCalendar (.ics).
+- 🔔 Recevez des notifications de sorties à venir via Apprise (Discord, Telegram, ntfy, Slack, e-mail, et bien d'autres).
+- 🐳 Déploiement facile avec Docker (docker-compose), en SQLite ou PostgreSQL.
+- 👥 Multi-utilisateurs : comptes individuels avec suivi personnalisé.
+- 🔑 Authentification flexible : OIDC et plus de 100 fournisseurs sociaux (Google, GitHub, Discord…) via django-allauth.
+- 🦀 Intégration avec [Jellyfin](https://jellyfin.org/), [Plex](https://plex.tv/) et [Emby](https://emby.media/) pour suivre automatiquement les nouveaux médias visionnés.
+- 📥 Import depuis [Trakt](https://trakt.tv/), [Simkl](https://simkl.com/), [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/) et [Kitsu](https://kitsu.app/), avec prise en charge des imports automatiques périodiques.
+- 📊 Exportez tous vos médias suivis dans un fichier CSV, et réimportez-le.
 
-<!-- --8<-- [start:docs-index-intro] -->
+## 📱 Captures d'écran
 
-# Yamtrack
-
-![App Tests](https://github.com/FuzzyGrim/Yamtrack/actions/workflows/app-tests.yml/badge.svg)
-![Docker Image](https://github.com/FuzzyGrim/Yamtrack/actions/workflows/docker-image.yml/badge.svg)
-![CodeFactor](https://www.codefactor.io/repository/github/fuzzygrim/yamtrack/badge)
-![Codecov](https://codecov.io/github/FuzzyGrim/Yamtrack/branch/dev/graph/badge.svg?token=PWUG660120)
-![GitHub](https://img.shields.io/badge/license-AGPL--3.0-blue)
-
-Yamtrack is a self hosted media tracker for movies, tv shows, anime, manga, video games, books, comics, and board games.
-
-<!-- --8<-- [end:docs-index-intro] -->
-
-## 📚 Documentation
-
-The full documentation is available at [fuzzygrim.github.io/Yamtrack](https://fuzzygrim.github.io/Yamtrack/).
-
-<!-- --8<-- [start:docs-index-body] -->
-
-## 🚀 Demo
-
-You can try the app at [yamtrack.fuzzygrim.com](https://yamtrack.fuzzygrim.com) using the username `demo` and password `demo`.
-
-## ✨ Features
-
-- 🎬 Track movies, tv shows, anime, manga, games, books, comics, and board games.
-- 📺 Track each season of a tv show individually and episodes watched.
-- ⭐ Save score, status, progress, repeats (rewatches, rereads...), start and end dates, or write a note.
-- 📈 Keep a tracking history with each action with a media, such as when you added it, when you started it, when you started watching it again, etc.
-- ✏️ Create custom media entries, for niche media that cannot be found by the supported APIs.
-- 📂 Create personal lists to organize your media for any purpose, add other members to collaborate on your lists.
-- 📅 Keep up with your upcoming media with a calendar, which can be subscribed to in external applications using a iCalendar (.ics) URL.
-- 🔔 Receive notifications of upcoming releases via Apprise (supports Discord, Telegram, ntfy, Slack, email, and many more).
-- 🐳 Easy deployment with Docker via docker-compose with SQLite or PostgreSQL.
-- 👥 Multi-users functionality allowing individual accounts with personalized tracking.
-- 🔑 Flexible authentication options including OIDC and 100+ social providers (Google, GitHub, Discord, etc.) via django-allauth.
-- 🦀 Integration with [Jellyfin](https://jellyfin.org/), [Plex](https://plex.tv/) and [Emby](https://emby.media/) to automatically track new media watched.
-- 📥 Import from [Trakt](https://trakt.tv/), [Simkl](https://simkl.com/), [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/) and [Kitsu](https://kitsu.app/) with support for periodic automatic imports.
-- 📊 Export all your tracked media to a CSV file and import it back.
-
-## 📱 Screenshots
-
-| Homepage                                                                                       | Calendar                                                                                    |
+| Accueil                                                                                        | Calendrier                                                                                  |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/homepage.png?v2" alt="Homepage" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/calendar.png" alt="calendar" /> |
+| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/homepage.png?v2" alt="Accueil" />  | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/calendar.png" alt="Calendrier" /> |
 
-| Media List Grid                                                                                    | Media List Table                                                                                     |
+| Liste (grille)                                                                                     | Liste (tableau)                                                                                      |
 | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/medialist_grid.png" alt="List Grid" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/medialist_table.png" alt="List Table" /> |
+| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/medialist_grid.png" alt="Liste grille" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/medialist_table.png" alt="Liste tableau" /> |
 
-| Media Details                                                                                         | Tracking                                                                                    |
+| Fiche détaillée                                                                                       | Suivi                                                                                       |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/media_details.png" alt="Media Details" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/tracking.png" alt="Tracking" /> |
+| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/media_details.png" alt="Fiche détaillée" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/tracking.png" alt="Suivi" />     |
 
-| Season Details                                                                                          | Tracking Episodes                                                                                            |
+| Détails de saison                                                                                       | Suivi des épisodes                                                                                           |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/season_details.png" alt="Season Details" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/tracking_episode.png" alt="Tracking Episodes" /> |
+| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/season_details.png" alt="Détails de saison" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/tracking_episode.png" alt="Suivi des épisodes" /> |
 
-| Lists                                                                                 | Statistics                                                                                      |
+| Listes                                                                                | Statistiques                                                                                    |
 | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/lists.png" alt="Lists" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/statistics.png" alt="Statistics" /> |
+| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/lists.png" alt="Listes" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/statistics.png" alt="Statistiques" /> |
 
-| Create Manual Entries                                                                                         | Import Data                                                                                       |
+| Création d'entrées manuelles                                                                                  | Import de données                                                                                 |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/create_custom.png" alt="Create Manual Entries" /> | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/import_data.png" alt="Import Data" /> |
+| <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/create_custom.png" alt="Création manuelle" />     | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/import_data.png" alt="Import de données" /> |
 
-## 🐳 Installing with Docker
+## 🛠️ Pour le mainteneur du fork
 
-Download the default `docker-compose.yml` file from the repository, update the environment values, and start Yamtrack:
+La traduction vit dans les catalogues `src/locale/fr/` (deux domaines : `django` et `djangojs`). Pour reconstruire et publier l'image française sur GHCR :
 
 ```bash
-docker compose up -d
+docker login ghcr.io -u Silvers12   # une fois, token avec le scope write:packages
+./publish.sh
 ```
 
-The default Compose file uses SQLite, which is enough for most personal installs. For full SQLite, PostgreSQL, and reverse proxy setup instructions, see the [Setup documentation](https://fuzzygrim.github.io/Yamtrack/setup/).
+Lors d'une nouvelle version de Yamtrack : `git fetch upstream --tags`, rebaser la branche `i18n-fr` sur le nouveau tag, régénérer les catalogues (`makemessages` pour les deux domaines), traduire les nouvelles chaînes, puis `./publish.sh`.
 
-## 💻 Development
+## 💪 Soutenir le projet d'origine
 
-Development instructions are available in the [Development documentation](https://fuzzygrim.github.io/Yamtrack/development/).
+Yamtrack est développé par **FuzzyGrim**. Pour le soutenir :
 
-## 💪 Support the Project
+- ⭐ Mettez une étoile au [dépôt d'origine](https://github.com/FuzzyGrim/Yamtrack).
+- 🐛 Signalez les bugs de l'**application** via les [issues d'origine](https://github.com/FuzzyGrim/Yamtrack/issues). Les problèmes de **traduction** peuvent être signalés sur [ce dépôt](https://github.com/Silvers12/Yamtrack/issues).
+- 💡 Proposez des fonctionnalités via les [issues GitHub](https://github.com/FuzzyGrim/Yamtrack/issues).
+- ☕ [Faites un don](https://ko-fi.com/fuzzygrim) à l'auteur original.
 
-There are many ways you can support Yamtrack's development:
+## 📄 Licence
 
-### ⭐ Star the Project
-
-The simplest way to show your support is to star the repository on GitHub. It helps increase visibility and shows appreciation for the work.
-
-### 🐛 Bug Reports
-
-Found a bug? Open an [issue](https://github.com/FuzzyGrim/Yamtrack/issues) on GitHub with detailed steps to reproduce it. Quality bug reports are incredibly valuable for improving stability.
-
-### 💡 Feature Suggestions
-
-Have ideas for new features? Share them through [GitHub issues](https://github.com/FuzzyGrim/Yamtrack/issues). Your feedback helps shape the future of Yamtrack.
-
-### 🧪 Contributing
-
-Pull requests are welcome! Whether it's fixing typos, improving documentation, or adding new features, your contributions help make Yamtrack better for everyone.
-
-### ☕ Donate
-
-If you'd like to support the project financially:
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/fuzzygrim)
+Distribué sous licence **AGPL-3.0**, comme le projet d'origine.
