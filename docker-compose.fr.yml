@@ -1,4 +1,4 @@
-# Yamtrack — version française (fork Silvers12/Yamtrack, branche i18n-fr).
+# Yamtrack — version française (fork Silvers12/Yamtrack, branche main).
 #
 # Démarrage :
 #   1. Remplace SECRET par une chaîne aléatoire :  openssl rand -base64 48
@@ -12,7 +12,7 @@
 services:
   yamtrack:
     container_name: yamtrack
-    image: ghcr.io/silvers12/yamtrack:i18n-fr
+    image: ghcr.io/silvers12/yamtrack:latest
     restart: unless-stopped
     depends_on:
       - redis

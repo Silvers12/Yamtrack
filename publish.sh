@@ -17,18 +17,18 @@ VERSION="$(git describe --tags 2>/dev/null || echo dev)"
 
 echo "==> Build de $IMAGE  (VERSION=$VERSION)"
 docker build --build-arg VERSION="$VERSION" \
-  -t "$IMAGE:i18n-fr" \
+  -t "$IMAGE:latest" \
   -t "$IMAGE:${VERSION}-fr" \
   .
 
 echo "==> Push vers GHCR"
-docker push "$IMAGE:i18n-fr"
+docker push "$IMAGE:latest"
 docker push "$IMAGE:${VERSION}-fr"
 
 echo
-echo "==> OK : $IMAGE:i18n-fr  (et :${VERSION}-fr)"
+echo "==> OK : $IMAGE:latest  (et :${VERSION}-fr)"
 echo "    Les utilisateurs mettent à jour avec :"
 echo "    docker compose -f docker-compose.fr.yml pull && docker compose -f docker-compose.fr.yml up -d"
 echo
 echo "Note : image mono-plateforme (amd64). Pour un build multi-arch (amd64+arm64),"
-echo "utilise buildx :  docker buildx build --platform linux/amd64,linux/arm64 --push -t \"$IMAGE:i18n-fr\" ."
+echo "utilise buildx :  docker buildx build --platform linux/amd64,linux/arm64 --push -t \"$IMAGE:latest\" ."

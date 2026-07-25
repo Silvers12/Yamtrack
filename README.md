@@ -15,7 +15,7 @@ Prérequis : **Docker** et **Docker Compose**.
 
 ```bash
 mkdir yamtrack && cd yamtrack
-curl -O https://raw.githubusercontent.com/Silvers12/Yamtrack/i18n-fr/docker-compose.fr.yml
+curl -O https://raw.githubusercontent.com/Silvers12/Yamtrack/main/docker-compose.fr.yml
 ```
 
 Ouvrez `docker-compose.fr.yml`, remplacez `REMPLACE_MOI_par_une_chaine_aleatoire` par une clé secrète (générez-la avec `openssl rand -base64 48`), puis lancez :
@@ -91,7 +91,7 @@ docker login ghcr.io -u Silvers12   # une fois, token avec le scope write:packag
 ./publish.sh
 ```
 
-Lors d'une nouvelle version de Yamtrack : `git fetch upstream --tags`, rebaser la branche `i18n-fr` sur le nouveau tag, régénérer les catalogues (`makemessages` pour les deux domaines), traduire les nouvelles chaînes, puis `./publish.sh`.
+Lors d'une nouvelle version de Yamtrack : `git fetch upstream`, rebaser la branche `main` sur `upstream/release` (la branche stable d'upstream, qui suit la dernière version publiée), régénérer les catalogues (`makemessages` pour les deux domaines `django` et `djangojs`), traduire les nouvelles chaînes, puis `./publish.sh`.
 
 ## 💪 Soutenir le projet d'origine
 
