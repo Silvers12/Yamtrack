@@ -1,3 +1,41 @@
+# 🇫🇷 Yamtrack — version française
+
+Ce dépôt est un **fork traduit en français** de [Yamtrack](https://github.com/FuzzyGrim/Yamtrack), un tracker de médias auto-hébergé (films, séries, animés, mangas, jeux vidéo, livres, BD, jeux de société). Toute l'interface est traduite : menus, statuts, types de média, fiches détaillées, statistiques et messages.
+
+## 🚀 Installation rapide (Docker)
+
+Prérequis : **Docker** et **Docker Compose**.
+
+```bash
+mkdir yamtrack && cd yamtrack
+curl -O https://raw.githubusercontent.com/Silvers12/Yamtrack/i18n-fr/docker-compose.fr.yml
+```
+
+Ouvrez `docker-compose.fr.yml`, remplacez `REMPLACE_MOI_par_une_chaine_aleatoire` par une clé secrète (générez-la avec `openssl rand -base64 48`), puis lancez :
+
+```bash
+docker compose -f docker-compose.fr.yml up -d
+```
+
+Ouvrez ensuite **http://IP_DU_SERVEUR:8000** dans votre navigateur et créez votre compte. L'interface est en français. 🇫🇷
+
+## 🔄 Mise à jour
+
+```bash
+docker compose -f docker-compose.fr.yml pull && docker compose -f docker-compose.fr.yml up -d
+```
+
+Vos données (comptes, suivis) sont stockées dans `./db` et ne sont **jamais perdues** lors d'une mise à jour.
+
+## ⚙️ Configuration
+
+- `LANGUAGE_CODE=fr` fixe la langue de l'interface, `TMDB_LANG=fr` celle des fiches films/séries.
+- Les autres variables (domaine public via `URLS`, sous-chemin via `BASE_URL`, clés API…) sont décrites dans la [documentation officielle](https://fuzzygrim.github.io/Yamtrack/).
+
+> ℹ️ La documentation ci-dessous (en anglais) concerne l'application d'origine. Le crédit du projet revient à [FuzzyGrim](https://github.com/FuzzyGrim/Yamtrack) ; ce dépôt n'ajoute que la traduction française.
+
+---
+
 <!-- --8<-- [start:docs-index-intro] -->
 
 # Yamtrack
