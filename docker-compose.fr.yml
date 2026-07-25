@@ -1,0 +1,40 @@
+# Yamtrack — version française (fork Silvers12/Yamtrack, branche i18n-fr).
+#
+# Démarrage :
+#   1. Remplace SECRET par une chaîne aléatoire :  openssl rand -base64 48
+#   2. docker compose -f docker-compose.fr.yml up -d
+#   3. Ouvre http://IP_DU_SERVEUR:8000  → crée ton compte.
+#
+# Mise à jour (quand une nouvelle version est publiée) :
+#   docker compose -f docker-compose.fr.yml pull && docker compose -f docker-compose.fr.yml up -d
+# Tes données (comptes, suivis) sont dans ./db et ne sont jamais perdues.
+
+services:
+  yamtrack:
+    container_name: yamtrack
+    image: ghcr.io/silvers12/yamtrack:i18n-fr
+    restart: unless-stopped
+    depends_on:
+      - redis
+    environment:
+      - TZ=Europe/Paris
+      - SECRET=REMPLACE_MOI_par_une_chaine_aleatoire
+      - REDIS_URL=redis://redis:6379
+      - LANGUAGE_CODE=fr
+      - TMDB_LANG=fr
+      # - URLS=https://yamtrack.ton-domaine.fr   # seulement si exposé via un domaine (CSRF)
+      # - BASE_URL=/Yamtrack                      # seulement si servi sous un sous-chemin
+    volumes:
+      - ./db:/yamtrack/db
+    ports:
+      - "8000:8000"
+
+  redis:
+    container_name: yamtrack-redis
+    image: redis:8-alpine
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
