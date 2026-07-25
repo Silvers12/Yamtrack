@@ -82,17 +82,6 @@ Vos données (comptes, suivis) sont stockées dans `./db` et ne sont **jamais pe
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/create_custom.png" alt="Création manuelle" />     | <img src="https://cdn.fuzzygrim.com/file/fuzzygrim/yamtrack/import_data.png" alt="Import de données" /> |
 
-## 🛠️ Pour le mainteneur du fork
-
-La traduction vit dans les catalogues `src/locale/fr/` (deux domaines : `django` et `djangojs`). Pour reconstruire et publier l'image française sur GHCR :
-
-```bash
-docker login ghcr.io -u Silvers12   # une fois, token avec le scope write:packages
-./publish.sh
-```
-
-Lors d'une nouvelle version de Yamtrack : `git fetch upstream`, rebaser la branche `main` sur `upstream/release` (la branche stable d'upstream, qui suit la dernière version publiée), régénérer les catalogues (`makemessages` pour les deux domaines `django` et `djangojs`), traduire les nouvelles chaînes, puis `./publish.sh`.
-
 ## 💪 Soutenir le projet d'origine
 
 Yamtrack est développé par **FuzzyGrim**. Pour le soutenir :
