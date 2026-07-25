@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - "dev"
+      - "i18n-fr"
     tags:
       - "v*"
   pull_request:
