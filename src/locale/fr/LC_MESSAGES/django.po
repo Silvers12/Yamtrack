@@ -2481,3 +2481,67 @@ msgid "Successfully cleared %(count)d search entry"
 msgid_plural "Successfully cleared %(count)d search entries"
 msgstr[0] "%(count)d entrée de recherche supprimée avec succès"
 msgstr[1] "%(count)d entrées de recherche supprimées avec succès"
+
+#: templates/app/components/home_section.html
+#, python-format
+msgid "%(count)s item"
+msgid_plural "%(count)s items"
+msgstr[0] "%(count)s élément"
+msgstr[1] "%(count)s éléments"
+
+#: templates/app/components/home_section.html
+msgid "Load all"
+msgstr "Tout charger"
+
+#: templates/app/components/home_section.html
+msgid "Nothing is actively moving right now"
+msgstr "Rien n'est en cours pour le moment"
+
+#: templates/app/components/home_section.html
+msgid "Your planning shelf is still empty"
+msgstr "Votre section Prévu est encore vide"
+
+#: templates/app/components/home_section.html
+msgid "Start a title and mark it as in progress to see quick updates and release reminders here."
+msgstr "Démarrez un titre et marquez-le comme en cours pour voir ici les mises à jour rapides et les rappels de sortie."
+
+#: templates/app/components/home_section.html
+msgid "Add a few titles to planning to see them here."
+msgstr "Ajoutez quelques titres à Prévu pour les voir ici."
+
+#: templates/app/components/home_section.html
+msgid "Browse media"
+msgstr "Parcourir les médias"
+
+#: templates/base.html
+msgid "Search and track media on Yamtrack."
+msgstr "Recherchez et suivez vos médias sur Yamtrack."
+
+#: templates/base.html
+#, python-format
+msgid "Search %(media_type)s..."
+msgstr "Rechercher %(media_type)s..."
+
+#: templates/app/components/search_parent_tv.html
+#, python-format
+msgid "No TV shows found matching \"%(query)s\". Please try a different search term."
+msgstr "Aucune série trouvée pour « %(query)s ». Essayez un autre terme de recherche."
+
+#: templates/app/components/search_parent_season.html
+#, python-format
+msgid "Season %(number)s of %(title)s"
+msgstr "Saison %(number)s de %(title)s"
+
+#: templates/app/components/search_parent_season.html
+#, python-format
+msgid "%(title)s - Season %(number)s"
+msgstr "%(title)s - Saison %(number)s"
+
+#: templates/app/components/search_parent_season.html
+#, python-format
+msgid "No seasons found matching \"%(query)s\". Please try a different search term."
+msgstr "Aucune saison trouvée pour « %(query)s ». Essayez un autre terme de recherche."
+
+#: templates/lists/components/list_item_button.html
+msgid "Remove"
+msgstr "Retirer"

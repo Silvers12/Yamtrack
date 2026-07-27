@@ -5,7 +5,7 @@ import sys
 import warnings
 import zoneinfo
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urlparse
 
 from celery.schedules import crontab
 from decouple import (
@@ -626,9 +626,11 @@ ACCOUNT_FORMS = {
 }
 
 if BASE_URL:
-    # Join base only if relative URL
+    # Join base only if relative URL, preserving deployments under a path prefix.
     if not urlparse(ACCOUNT_LOGOUT_REDIRECT_URL).netloc:
-        ACCOUNT_LOGOUT_REDIRECT_URL = urljoin(BASE_URL, ACCOUNT_LOGOUT_REDIRECT_URL)
+        ACCOUNT_LOGOUT_REDIRECT_URL = (
+            f"{BASE_URL.rstrip('/')}/{ACCOUNT_LOGOUT_REDIRECT_URL.lstrip('/')}"
+        )
     SESSION_COOKIE_PATH = BASE_URL + "/"
 
 SOCIALACCOUNT_LOGIN_ON_GET = True
